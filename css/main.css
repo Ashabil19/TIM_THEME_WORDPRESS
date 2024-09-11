@@ -75,56 +75,48 @@ div.nav-search-bar .search-input input,
 div.nav-search-bar button {
   border: 1px solid gray;
 }
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: blue;
-  padding: 18px 5rem;
-}
-
-.logo {
-  display: none;
-}
-
-.logo h1 {
-  color: white;
-  font-size: 24px;
-}
-
-.nav-menu {
+nav {
+  position: sticky;
+  width: 100%;
   display: flex;
   justify-content: start;
-  flex: 2; /* Membuat menu berada di tengah */
-  list-style: none;
-  font-weight: bold;
+  padding: 20px 3.5rem;
+  box-sizing: border-box;
+  align-items: center;
+  background-color: #152793;
+  top: 0;
+  z-index: 1;
+}
+nav h1 {
+  display: none;
 }
 
-.nav-item {
-  margin: 0 15px;
-}
-
-.nav-link {
-  color: white;
+nav ul li a {
+  position: relative;
   text-decoration: none;
-  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
 }
 
-.nav-link:hover {
-  text-decoration: underline;
-}
-
-.menu-toggle {
+.hamburger-icon {
   display: none;
   flex-direction: column;
-  cursor: pointer;
+  justify-content: space-between;
+  height: 25px;
+}
+.hamburger-icon span {
+  display: block;
+  width: 28px;
+  height: 2px;
+  background-color: white;
 }
 
-.menu-toggle .bar {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  margin: 5px 0;
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 40%;
+  justify-content: space-evenly;
 }
 section#hero {
 }
@@ -148,15 +140,19 @@ section#hero .service-hero-container .service-hero {
   background-color: blueviolet;
 }
 section#container-tab1 {
-  padding: 0 4rem;
-  margin-top: 100px;
+  padding: 0;
+  margin: 100px auto;
+  box-sizing: border-box;
+  /* background-color: aquamarine; */
+  max-width: 1400px;
 }
 section#container-tab1 .tabcontent .card-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
-  max-width: 1800px;
+  max-width: 1400px;
   place-items: center;
+  margin: auto;
   /* background-color: pink; */
 }
 section#container-tab1 .tabcontent .card-container .card {
@@ -185,39 +181,84 @@ section#container-tab1 .tabcontent .card-container .card .card-footer button {
   border-radius: 8px;
 }
 .tab {
-  overflow: hidden;
+  /* overflow: hidden; */
   /* border: 1px solid #ccc; */
-  background-color: #f1f1f1;
+  border-bottom: 2px solid rgba(229, 229, 229);
+  /* background-color: rgb(192, 246, 255); */
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  position: relative;
+  font-size: 18px;
 }
 
-/* Style the buttons inside the tab */
 .tab button {
   background-color: inherit;
-  float: left;
+  /* float: left; */
   border: none;
-  outline: none;
   cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
+  padding: 18px;
+  font-size: 18px;
 }
 
-/* Change background color of buttons on hover */
-.tab button:hover {
+/* .tab button:hover {
   background-color: #ddd;
-}
+} */
 
-/* Create an active/current tablink class */
-.tab button.active-tab {
-  background-color: #ccc;
-}
+/* .tab button.active-tab {
+  border-bottom: 3px solid #152793;
+  font-weight: bold;
+} */
 
-/* Style the tab content */
+.tab button.tab-active {
+  font-weight: bold;
+  color: #152793;
+}
+section#container-tab1 .tab .line {
+  position: absolute;
+  top: 52px;
+  left: 0;
+  width: 313px;
+  height: 5px;
+  background-color: red;
+  transition: all 0.3s ease-in-out;
+}
 .tabcontent {
   display: none;
   padding: 6px 12px;
-  /* border: 1px solid #ccc; */
   border-top: none;
+  animation: moving 0.5s ease;
+}
+@keyframes moving {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.tabcontent.tab-active {
+  display: block;
+}
+/* article related */
+
+/* end article related */
+section#article-related {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 380px));
+  justify-content: center;
+  background-color: pink;
+
+  max-width: 1500px;
+  place-items: center;
+  margin: 100px auto;
+}
+section#article-related div {
+  width: 300px;
+  height: 300px;
+  background-color: aquamarine;
 }
 /* Responsive Styling */
 @media (max-width: 768px) {
@@ -227,37 +268,53 @@ section#container-tab1 .tabcontent .card-container .card .card-footer button {
   div.nav-search-bar img {
     display: none;
   }
-  .navbar {
-    padding: 16px;
-    margin-top: 20px;
-  }
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    position: absolute;
-    top: 330px;
-    right: 0;
-    height: 100%;
-    width: fit-content;
-
-    background-color: blue;
-  }
-  .logo {
+  nav {
     display: flex;
-    /* Membuat logo berada di kiri */
-    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 18px;
     box-sizing: border-box;
   }
-  .nav-item {
-    margin: 10px 0;
+  nav ul {
+    display: none;
+    opacity: 0;
+    flex-direction: column;
+    align-items: center;
+    width: 0%;
+    background-color: #152793;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: 1s;
+  }
+  nav h1 {
+    display: block;
+  }
+  nav ul.tampil-nav-ul {
+    display: flex;
+    opacity: 1;
+    width: 40%;
   }
 
-  .menu-toggle {
+  .hamburger-icon {
     display: flex;
+    z-index: 2;
   }
-
-  .nav-menu.active {
-    display: flex;
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 12px;
+  }
+  section#container-tab1 {
+    padding: 0;
+  }
+  section#container-tab1 .tabcontent .card-container {
+    width: 100%;
   }
 }

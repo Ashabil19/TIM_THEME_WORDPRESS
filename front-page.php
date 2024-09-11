@@ -29,21 +29,21 @@
     </div>
 </div>
 
-<nav class="navbar">
-    <div class="logo">
-        <h1>Logo</h1>
-    </div>
-    <ul class="nav-menu">
-        <li class="nav-item"><a href="#beranda" class="nav-link">Beranda</a></li>
-        <li class="nav-item"><a href="#produk" class="nav-link">Produk</a></li>
-        <li class="nav-item"><a href="#artikel" class="nav-link">Artikel</a></li>
-        <li class="nav-item"><a href="#produk-terlaris" class="nav-link">Produk Terlaris</a></li>
-        <li class="nav-item"><a href="#hubungi-kami" class="nav-link">Hubungi Kami</a></li>
+<nav>
+    <h1>Logo</h1>
+    <ul class="">
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#">Produk</a></li>
+        <li><a href="#">Artikel</a></li>
+        <li><a href="#">Produk Terlaris</a></li>
+        <li><a href="#">Hubungi Kami</a></li>
     </ul>
-    <div class="menu-toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+
+
+    <div class="hamburger-icon">
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
 </nav>
 
@@ -58,70 +58,83 @@
 
 <section id="container-tab1">
     <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'discount')">DISCOUNTS AND PROMOTIONS</button>
-        <button class="tablinks" onclick="openCity(event, 'new')">NEW</button>
-        <button class="tablinks" onclick="openCity(event, 'featured')">FEATURED</button>
+        <button class="tablinks tab-active">DISCOUNTS AND PROMOTIONS</button>
+        <button class="tablinks">NEW</button>
+        <button class="tablinks">FEATURED</button>
+        <div class="line"></div>
     </div>
+    <div class="tabcontent-container">
 
-    <div id="discount" class="tabcontent">
-        <div class="card-container">
-            <div class="card">
-                <div class="card-img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/product-img.png" alt="">
+        <div id="discount" class="tabcontent tab-active">
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/product-img.png" alt="">
+                    </div>
+                    <div class="card-title">
+                        <h4>Judul Produk</h4>
+                    </div>
+                    <div class="card-footer">
+                        <button>Detail</button>
+                    </div>
                 </div>
-                <div class="card-title">
-                    <h4>Judul Produk</h4>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/product-img.png" alt="">
+                    </div>
+                    <div class="card-title">
+                        <h4>Judul Produk</h4>
+                    </div>
+                    <div class="card-footer">
+                        <button>Detail</button>
+                    </div>
                 </div>
-                <div class="card-footer">
-                    <button>Detail</button>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-timeinstrument.png" alt="">
+                    </div>
+                    <div class="card-title">
+                        <h4>Judul Produk</h4>
+                    </div>
+                    <div class="card-footer">
+                        <button>Detail</button>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/product-img.png" alt="">
-                </div>
-                <div class="card-title">
-                    <h4>Judul Produk</h4>
-                </div>
-                <div class="card-footer">
-                    <button>Detail</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-timeinstrument.png" alt="">
-                </div>
-                <div class="card-title">
-                    <h4>Judul Produk</h4>
-                </div>
-                <div class="card-footer">
-                    <button>Detail</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-timeinstrument.png" alt="">
-                </div>
-                <div class="card-title">
-                    <h4>Judul Produk</h4>
-                </div>
-                <div class="card-footer">
-                    <button>Detail</button>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-timeinstrument.png" alt="">
+                    </div>
+                    <div class="card-title">
+                        <h4>Judul Produk</h4>
+                    </div>
+                    <div class="card-footer">
+                        <button>Detail</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div id="new" class="tabcontent">
-        <h3>Paris</h3>
-        <p>Paris is the capital of France.</p>
-    </div>
+        <div id="new" class="tabcontent">
+            <h3>Paris</h3>
+            <p>Paris is the capital of France.</p>
+        </div>
 
-    <div id="featured" class="tabcontent">
-        <h3>Tokyo</h3>
-        <p>Tokyo is the capital of Japan.</p>
+        <div id="featured" class="tabcontent">
+            <h3>Tokyo</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
     </div>
 </section>
+
+<section id="article-related">
+    <div>
+        <h3>Article</h3>
+    </div>
+    <div>
+        <h3>Article</h3>
+    </div>
+</section>
+
 
 
 <?php get_footer(); ?>
