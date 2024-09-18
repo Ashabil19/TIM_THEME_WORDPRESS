@@ -50,17 +50,25 @@ tabs.forEach((tab) => {
   });
 });
 
-// function openTabs(evt, tabName) {
-//   var i, tabcontent, tablinks;
-//   tabcontent = document.getElementsByClassName("tabcontent");
-//   for (i = 0; i < tabcontent.length; i++) {
-//     tabcontent[i].style.display = "none";
-//   }
-//   tablinks = document.getElementsByClassName("tablinks");
-//   for (i = 0; i < tablinks.length; i++) {
-//     tablinks[i].className = tablinks[i].className.replace(" active-tab", "");
-//   }
-//   document.getElementById(tabName).style.display = "block";
-//   evt.currentTarget.className += " active-tab";
-// }
-// document.getElementById("defaultOpen").click();
+
+const slides = document.querySelector('.slides');
+let currentIndex = 0;
+const totalSlides = 3;
+const slideInterval = 3000;
+
+function goToNextSlide() {
+  currentIndex++;
+  if (currentIndex === totalSlides) {
+    slides.style.transition = 'none'; // Disable transition for instant jump
+    slides.style.transform = 'translateX(0)'; // Jump to the first slide
+    currentIndex = 0;
+    setTimeout(() => {
+      slides.style.transition = 'transform 0.5s ease-in-out'; // Re-enable smooth transition
+    }, 50); // Re-enable after a tiny delay
+  } else {
+    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+}
+
+setInterval(goToNextSlide, slideInterval);
+

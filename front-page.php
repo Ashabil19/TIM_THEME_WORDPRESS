@@ -1,31 +1,6 @@
 <?php get_header(); ?>
 
 
-<div class="nav-search-bar">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-timeinstrument.png" alt="">
-    <div class="search-input">
-        <input type="search" name="" id="" placeholder="Search Product">
-        <button><img src="<?php echo get_template_directory_uri(); ?>/assets/img/search-icon.svg" alt=""></button>
-    </div>
-
-</div>
-
-<nav>
-    <h1>Logo</h1>
-    <ul class="">
-        <li><a href="#">Beranda</a></li>
-        <li><a href="#">Produk</a></li>
-        <li><a href="#">Artikel</a></li>
-        <li><a href="#">Produk Terlaris</a></li>
-        <li><a href="#">Hubungi Kami</a></li>
-    </ul>
-    <div class="hamburger-icon">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-</nav>
-
 <section id="hero">
     <div class="hero-banner">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero-content.png" alt="">

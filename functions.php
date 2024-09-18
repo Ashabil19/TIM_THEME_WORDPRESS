@@ -9,6 +9,12 @@ function load_css()
 
     wp_register_style('main', get_template_directory_uri() . '/css/main.css', [], 1, 'all');
     wp_enqueue_style('main');
+
+
+    
+    // Tambahkan file CSS lainnya sesuai kebutuhan
+    wp_register_style('product-page', get_template_directory_uri() . '/css/product-page.css', [], 1, 'all');
+    wp_enqueue_style('product-page');
 }
 add_action('wp_enqueue_scripts', 'load_css');
 
