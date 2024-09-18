@@ -38,8 +38,6 @@
         <li><a href="#">Produk Terlaris</a></li>
         <li><a href="#">Hubungi Kami</a></li>
     </ul>
-
-
     <div class="hamburger-icon">
         <span></span>
         <span></span>
