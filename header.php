@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/article-page.css">
+
     <title><?php bloginfo('name'); ?></title>
 
     <?php wp_head(); ?>
@@ -14,7 +15,7 @@
 
 <body <?php body_class(); ?>>
 
-<!-- 
+    <!-- 
 <div class="nav-contact" style="margin-top: 20px;">
     <div class="nav-contact-icon">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/TelephoneOutbound.svg" alt="">
@@ -34,26 +35,26 @@
     </div>
 </div> -->
 
-<div class="nav-search-bar">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-timeinstrument.png" alt="">
-    <div class="search-input">
-        <input type="search" name="" id="" placeholder="Search Product">
-        <button><img src="<?php echo get_template_directory_uri(); ?>/assets/img/search-icon.svg" alt=""></button>
+    <div class="nav-search-bar">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-timeinstrument.png" alt="">
+        <div class="search-input">
+            <input type="search" name="" id="" placeholder="Search Product">
+            <button><img src="<?php echo get_template_directory_uri(); ?>/assets/img/search-icon.svg" alt=""></button>
+        </div>
     </div>
-</div>
 
-<nav>
-    <h1>Logo</h1>
-    <ul class="">
-        <li><a href="#">Beranda</a></li>
-        <li><a href="#">Produk</a></li>
-        <li><a href="#">Artikel</a></li>
-        <li><a href="#">Produk Terlaris</a></li>
-        <li><a href="#">Hubungi Kami</a></li>
-    </ul>
-    <div class="hamburger-icon">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-</nav>
+    <nav>
+        <h1>Logo</h1>
+        <ul class="">
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Produk</a></li>
+            <li><a href="#">Artikel</a></li>
+            <li><a href="#">Produk Terlaris</a></li>
+            <li><a href="#">Hubungi Kami</a></li>
+        </ul>
+        <div class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>

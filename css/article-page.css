@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+section#article-hero-container {
+  padding: 20px 2rem;
+  box-sizing: border-box;
+  color: white;
+  margin-top: 40px;
+}
+
+section#article-hero-container .line-article-hero {
+  width: 60%;
+  height: 5px;
+  background-color: black;
+}
+section#article-hero-container .article-hero {
+  background-color: #152793;
+  display: flex;
+  margin-top: 20px;
+}
+section#article-hero-container .article-hero .article-hero1 {
+  width: 50%;
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+section#article-hero-container .article-hero .article-hero1 h1 {
+  font-size: 7em;
+  margin: 0;
+  padding: 0;
+}
+section#article-hero-container .article-hero .article-hero1 .article-hero-txt {
+  display: flex;
+
+  align-items: center;
+  gap: 20px;
+}
+section#article-hero-container
+  .article-hero
+  .article-hero1
+  .line2-article-hero {
+  width: 75%;
+  height: 3px;
+  background-color: white;
+}
+section#article-hero-container .article-hero .article-hero2 {
+  padding: 12px 2px;
+}
+section#article-hero-container .article-hero .article-hero2 .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+section#article-hero-container .article-hero .article-hero2 .logo img {
+  width: 20%;
+  height: 100%;
+}
+section#article-hero-container .article-hero .article-hero2 .logo h1 {
+  font-size: 2.6em;
+}
+section#article-hero-container
+  .article-hero
+  .article-hero2
+  .line2-article-hero {
+  width: 30%;
+  height: 3px;
+  background-color: white;
+  margin-top: 40px;
+}
+section#article-hero-container .article-hero .article-hero2 p {
+  width: 45%;
+}
+.separator-article {
+  width: 30%;
+  height: 5px;
+  background-color: black;
+  margin: 50px auto;
+}
+section#article {
+  /* background-color: pink; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+section#article .article-container {
+  /* background-color: aliceblue; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 34px;
+}
+section#article .article-container .card {
+  display: flex;
+  gap: 24px;
+  width: 80%;
+  /* background-color: blanchedalmond; */
+}
+section#article .article-container .card img {
+  width: 30%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+section#article .article-container .card span {
+  color: gray;
+}
+section#article .article-container .card p {
+  overflow: hidden;
+  height: 100px;
+}
+section#article .article-container .card a {
+  color: black;
+  text-decoration: none;
+}
+section#article .article-container .card .card-footer {
+  padding: 2px 0;
+  width: fit-content;
+  border-bottom: 3px solid #152793;
+}
+.product-card-content button {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+.paggination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 80px;
+}
+.paggination .prev-paggination a,
+.paggination .next-paggination a {
+  color: black;
+  text-decoration: none;
+}
+.paggination .number-paggination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+.paggination .number-paggination .active {
+  color: white;
+  background-color: black;
+  padding: 8px;
+  border-radius: 5px;
+}
+#related-product-container {
+  margin-top: 80px;
+  /* background-color: pink; */
+  padding: 0 4rem;
+  box-sizing: border-box;
+}
+#related-product-container .related-product {
+  background-color: #152793;
+  margin: auto;
+  width: 50%;
+  color: white;
+  text-align: center;
+}
+#related-product-container .related-product h1 {
+  font-weight: normal;
+}
+#related-product-container .card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  margin-top: 70px;
+}
+#related-product-container .card-container .card {
+  /* background-color: aquamarine; */
+  max-height: 350px;
+  text-align: center;
+}
+#related-product-container .card-container .card img {
+  max-width: 100%;
+  max-height: 79%;
+  background-size: cover;
+}
+.quotes-footer {
+  background-color: #152793;
+  color: white;
+  width: 80%;
+  margin: 50px auto;
+  text-align: center;
+  padding: 18px 0;
+}
+.quotes-footer h3 {
+  width: 40%;
+  margin: auto;
+  font-weight: normal;
+}
