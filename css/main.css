@@ -8,11 +8,6 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.page .container {
-  /* padding: 2rem; */
-  /* background: #ffffff; */
-}
-
 header.main ul {
   display: flex;
   justify-content: center;
@@ -24,24 +19,6 @@ header.main li {
 header.main li a {
   /* padding: 0 1.5rem; */
   display: block;
-}
-div.nav-contact {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-div.nav-contact .nav-contact-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-div.nav-contact .nav-contact-icon img {
-  width: 20px;
-}
-div.nav-contact .nav-contact-icon span {
-  font-size: 1rem;
 }
 div.nav-search-bar {
   display: flex;
@@ -122,12 +99,15 @@ section#hero {
 }
 section#hero .hero-banner {
   width: 100%;
-  height: 70vh;
+  min-height: 200px;
+  max-height: 500px;
   background-color: aquamarine;
 }
 section#hero .hero-banner img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 section#hero .service-hero-container {
   display: flex;
@@ -139,14 +119,14 @@ section#hero .service-hero-container .service-hero {
   margin-top: -50px;
   background-color: blueviolet;
 }
-section#container-tab1 {
+section.container-tab {
   padding: 0;
   margin: 100px auto;
   box-sizing: border-box;
   /* background-color: aquamarine; */
   max-width: 1400px;
 }
-section#container-tab1 .tabcontent .card-container {
+section.container-tab .tabcontent .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
@@ -155,7 +135,7 @@ section#container-tab1 .tabcontent .card-container {
   margin: auto;
   /* background-color: pink; */
 }
-section#container-tab1 .tabcontent .card-container .card {
+section.container-tab .tabcontent .card-container .card {
   /* background-color: aqua; */
   width: 18rem;
   height: 250px;
@@ -164,16 +144,16 @@ section#container-tab1 .tabcontent .card-container .card {
   justify-content: space-between;
   align-items: center;
 }
-section#container-tab1 .tabcontent .card-container .card .card-img {
+section.container-tab .tabcontent .card-container .card .card-img {
   width: 100%;
   height: 70%;
 }
-section#container-tab1 .tabcontent .card-container .card .card-img img {
+section.container-tab .tabcontent .card-container .card .card-img img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
-section#container-tab1 .tabcontent .card-container .card .card-footer button {
+section.container-tab .tabcontent .card-container .card .card-footer button {
   background-color: #152793;
   color: white;
   padding: 8px;
@@ -200,27 +180,26 @@ section#container-tab1 .tabcontent .card-container .card .card-footer button {
   padding: 18px;
   font-size: 18px;
 }
-
-/* .tab button:hover {
-  background-color: #ddd;
-} */
-
-/* .tab button.active-tab {
-  border-bottom: 3px solid #152793;
-  font-weight: bold;
-} */
-
 .tab button.tab-active {
   font-weight: bold;
   color: #152793;
 }
-section#container-tab1 .tab .line {
+section.container-tab .tab .line {
   position: absolute;
   top: 52px;
   left: 0;
   width: 313px;
   height: 5px;
   background-color: red;
+  transition: all 0.3s ease-in-out;
+}
+section.container-tab .tab .line2 {
+  position: absolute;
+  top: 52px;
+  left: 0;
+  width: 146px;
+  height: 5px;
+  background-color: rgb(0, 255, 55);
   transition: all 0.3s ease-in-out;
 }
 .tabcontent {
@@ -259,6 +238,55 @@ section#article-related div {
   width: 300px;
   height: 300px;
   background-color: aquamarine;
+}
+section.categories-home {
+  display: flex;
+  overflow-x: scroll;
+  gap: 20px;
+  background-color: pink;
+  justify-content: center;
+  max-width: 1300px;
+  margin: auto;
+  flex-wrap: nowrap;
+}
+section.categories-home .categories-content {
+  background-color: aquamarine;
+  width: 300px;
+  height: 300px;
+}
+footer {
+  background-color: #333333;
+  padding: 10px 5rem;
+  box-sizing: border-box;
+}
+footer .footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 400px));
+  /* background-color: pink; */
+}
+footer .footer-container .logo-content .footer-contact {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  gap: 10px;
+}
+footer .footer-container .logo-content .footer-contact img {
+  width: 22px;
+}
+footer .footer-container .logo-content .footer-contact span {
+  color: white;
+}
+footer .footer-container .menu-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 28px;
+  color: white;
+}
+footer .footer-container .menu-footer a {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
 }
 /* Responsive Styling */
 @media (max-width: 768px) {
@@ -311,10 +339,17 @@ section#article-related div {
     transition: 0.3s;
     font-size: 12px;
   }
-  section#container-tab1 {
+  section.container-tab {
     padding: 0;
   }
-  section#container-tab1 .tabcontent .card-container {
+  section.container-tab .tabcontent .card-container {
     width: 100%;
+  }
+  footer {
+    padding: 5px;
+    width: 100%;
+  }
+  footer .footer-container .logo-content img {
+    width: 80%;
   }
 }
