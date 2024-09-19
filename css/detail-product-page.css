@@ -48,11 +48,15 @@ section#detail-product .product-img .img-preview img {
   width: 100%;
   height: 100%;
 }
-section#detail-product .product-desc {
-  /* background-color: aqua; */
+/* section#detail-product .product-desc {
+  background-color: aquamarine;
+} */
+section#detail-product .product-desc small {
+  margin-top: 20px;
 }
 section#detail-product .product-desc p {
   /* background-color: blue; */
+  margin-top: 20px;
   width: 70%;
 }
 section#detail-product .product-desc button {
@@ -64,7 +68,8 @@ section#detail-product .product-desc button {
   gap: 18px;
   border: none;
   border-radius: 10px;
-  padding: 0 20px;
+  padding: 8px 20px;
+  margin-top: 20px;
 }
 section#detail-product .product-desc button img {
   width: 15%;
@@ -90,6 +95,9 @@ section#container-tab-product .tab-product button.tablinks-product {
   font-size: 18px;
   cursor: pointer;
 }
+section#container-tab-product .tabcontent-product-container {
+  margin-top: 10px;
+}
 section#container-tab-product
   .tabcontent-product-container
   .tabcontent-product {
@@ -102,6 +110,7 @@ section#container-tab-product
   .tabcontent-product-container
   .tabcontent-product
   p {
+  margin: 18px 0;
   max-width: 60%;
 }
 @keyframes moving {
@@ -127,11 +136,11 @@ section#container-tab-product
   border: 2px solid #8691d0;
 }
 section#related-article-product {
-  /* background-color: pink; */
   margin-top: 80px;
   padding: 0 6rem;
   display: flex;
   flex-direction: column;
+  gap: 12px;
 }
 section#related-article-product .article-container {
   display: grid;
@@ -150,6 +159,7 @@ section#related-article-product
   .article-card
   .article-card-head {
   height: 50%;
+  margin-bottom: 12px;
 }
 section#related-article-product
   .article-container
@@ -170,7 +180,7 @@ section#related-article-product
   overflow: hidden;
 }
 section#related-article-product button {
-  margin: 24px auto;
+  margin: 8px auto;
   font-size: 20px;
   width: max-content;
   background-color: #152793;
@@ -203,6 +213,7 @@ section#related-product-detail
   .product-card-head {
   width: 100%;
   height: 80%;
+  margin-bottom: 12px;
 }
 section#related-product-detail
   .product-container
