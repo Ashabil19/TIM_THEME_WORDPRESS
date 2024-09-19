@@ -38,6 +38,7 @@
 </footer>
 
 <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/detail-product.js"></script>
 </body>
 
 </html>

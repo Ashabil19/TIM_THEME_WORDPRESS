@@ -49,26 +49,3 @@ tabs.forEach((tab) => {
     contentToShow.classList.add("tab-active");
   });
 });
-
-
-const slides = document.querySelector('.slides');
-let currentIndex = 0;
-const totalSlides = 3;
-const slideInterval = 3000;
-
-function goToNextSlide() {
-  currentIndex++;
-  if (currentIndex === totalSlides) {
-    slides.style.transition = 'none'; // Disable transition for instant jump
-    slides.style.transform = 'translateX(0)'; // Jump to the first slide
-    currentIndex = 0;
-    setTimeout(() => {
-      slides.style.transition = 'transform 0.5s ease-in-out'; // Re-enable smooth transition
-    }, 50); // Re-enable after a tiny delay
-  } else {
-    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-  }
-}
-
-setInterval(goToNextSlide, slideInterval);
-
