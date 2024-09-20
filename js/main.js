@@ -49,3 +49,34 @@ tabs.forEach((tab) => {
     contentToShow.classList.add("tab-active");
   });
 });
+
+
+
+// filter container
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const headers = document.querySelectorAll('.accordion-header, .accordion-sub-header');
+
+  headers.forEach(header => {
+    header.addEventListener('click', function() {
+      const parentItem = header.parentElement;
+      const content = header.nextElementSibling;
+
+      // Toggle current section
+      if (content && content.style.display === 'block') {
+        content.style.display = 'none';
+        parentItem.classList.remove('active');
+      } else {
+        content.style.display = 'block';
+        parentItem.classList.add('active');
+      }
+    });
+  });
+});
+
+
+
+
+
+

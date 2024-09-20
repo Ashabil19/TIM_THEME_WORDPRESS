@@ -1,34 +1,203 @@
-.slider {
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-  position: relative;
-}
-
-.slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 300%;
-}
-
-.slide {
-  width: 100%;
-  height: 300px;
+.banner{  
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+
+  height: 60vh;
+  background-color: #292929;
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Tetap untuk desktop */
+}
+
+/* FIlter Container */
+.accordion-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.accordion-header, 
+.accordion-sub-header,
+.accordion-sub-sub-header {
+  width: 100%;
+  text-align: left;
+  background-color: #f7f7f7;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover,
+.accordion-sub-header:hover,
+.accordion-sub-sub-header:hover {
+  background-color: #e0e0e0;
+}
+
+.accordion-content, .accordion-sub-content {
+  display: none;
+  padding-left: 20px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+}
+
+.accordion-sub-item {
+  margin-left: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.accordion-item.active .accordion-content,
+.accordion-sub-item.active .accordion-sub-content {
+  display: block;
+}
+
+.accordion-sub-sub-header {
+  padding-left: 30px;
+  font-size: 14px;
+  display: block;
+  text-align: left;
+  background-color: #fff;
+}
+
+
+.product-section{
+  display: flex;
+  align-items: start;
+  justify-content: center;
+
+  gap: 20px;
+
+  height: max-content;
+  padding: 50px 150px;
+  /* background-color: red; */
+}
+
+.box-content{
+  /* border: 1px solid white; */
+  padding: 20px;
+}
+.box-content:nth-child(2){
+  /* border: 1px solid white; */
+  padding: 20px;
+}
+
+.filter-container{
+  width: 25%;
+}
+.product-container {
+  width: 75%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 kolom dengan lebar yang sama */
+  gap: 10px; /* Jarak antar item */
+}
+
+.card_product{
+  width: 335px;
+  height: max-content;
+  padding: 5px;
+
+  /* background-color: #ffff; */
+  border: 1px solid #292929;
+  border-radius: 5px;
+
+  color: rgb(72, 72, 72);
+}
+
+
+.card_header img{
+  /* width: 100%; */
+  height: 100%;
+  /* height: 300px; */
+}
+
+.img-container{
+  width: 100%;
+  height: 340px;
+}
+
+
+
+.card_header h4{
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+
+.card_body p{
+  font-size: 14px;
+}
+.product_button{
+  width: 100%;
+  background-color: #161D6F;
+  padding: 20px 50px ;
+  margin-top: 7px;
   color: white;
+  border: none;
+  border-radius: 2px;
 }
 
-.slide:nth-child(1) {
-  background-color: #f44336;
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .banner{
+    background-size: cover; /* Pastikan gambar mencakup seluruh area */
+    background-position: center; /* Posisi tengah untuk gambar */
+    background-attachment: scroll; /* Mengubah dari fixed ke scroll */
+    background-repeat: no-repeat;
+    height: 40vh; /* Kurangi tinggi pada perangkat yang lebih kecil */
+  }
+  .filter-container{
+    width: 25%;
+  }
+  .product-container{
+    grid-template-columns: 1fr; /* 1 kolom di layar kecil (mobile) */
+
+  }
+
+  .product-section{
+    padding: 10px;
+  }
+
+  .card_product{
+    width: 220px;
+    height: max-content;
+    padding: 5px;
+  
+    /* background-color: #ffff; */
+    border: 1px solid #292929;
+    border-radius: 5px;
+  
+    color: rgb(72, 72, 72);
+  }
+
+  .img-container{
+    width: 100%;
+    height: 220px;
+  }
+  .product_button{
+    width: 100%;
+    background-color: #161D6F;
+    padding: 20px 50px ;
+    margin-top: 20px;
+    color: white;
+    border: none;
+    border-radius: 2px;
+  }
+
+  .card_header h4{
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
 }
 
-.slide:nth-child(2) {
-  background-color: #2196f3;
-}
-
-.slide:nth-child(3) {
-  background-color: #4caf50;
-}

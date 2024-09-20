@@ -2,7 +2,7 @@
 
 <section id="homepage">
     <?php 
-        $gambar = get_template_directory_uri() . '/assets/img/article-pages/tes-article.png';
+        $gambar = get_template_directory_uri() . '/assets/img/kv-pi-services.jpeg';
         // tinggal cari parameter dari ACF
     ?>
     <div class="banner" style="background-image: url('<?php echo $gambar; ?>');">
@@ -11,10 +11,115 @@
 </section>
 
 <section class="product-section" >
+
+
+
     <div class="box-content filter-container">
 
-        INI CERITANYA Filter
+
+        
+
+        <!-- <div class="accordion-container">
+            <div class="accordion-item">
+            <button class="accordion-header">Category 1</button>
+            <div class="accordion-content">
+                <div class="accordion-sub-item">
+                    <button class="accordion-sub-header">Sub Category 1-1</button>
+                    <div class="accordion-sub-content">
+                        <button class="accordion-sub-sub-header">Sub Sub Category 1-1-1</button>
+                        <button class="accordion-sub-sub-header">Sub Sub Category 1-1-2</button>
+                    </div>
+                </div>
+                <div class="accordion-sub-item">
+                    <button class="accordion-sub-header">Sub Category 1-2</button>
+                    <div class="accordion-sub-content">
+                        <button class="accordion-sub-sub-header">Sub Sub Category 1-1-1</button>
+                        <button class="accordion-sub-sub-header">Sub Sub Category 1-1-2</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="accordion-item">
+            <button class="accordion-header">Category 2</button>
+            <div class="accordion-content">
+                <div class="accordion-sub-item">
+                <button class="accordion-sub-header">Sub Category 2-1</button>
+                <div class="accordion-sub-content">
+                    <button class="accordion-sub-sub-header">Sub Sub Category 2-1-1</button>
+                    <button class="accordion-sub-sub-header">Sub Sub Category 2-1-2</button>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div> -->
+        <?php
+// Fungsi untuk menampilkan kategori dan subkategori
+function display_category_hierarchy($parent_id = 0, $taxonomy = 'category') {
+    // Ambil semua terms dari taxonomy 'category' dengan parent ID tertentu
+    $categories = get_terms(array(
+        'taxonomy'   => $taxonomy,
+        'parent'     => $parent_id,
+        'hide_empty' => false, // Jangan sembunyikan kategori yang kosong
+    ));
+
+    // Periksa apakah ada kategori yang ditemukan
+    if (!empty($categories) && !is_wp_error($categories)) {
+        $output = '';
+        foreach ($categories as $category) {
+            // Tampilkan kategori utama
+            $output .= '<div class="accordion-item">';
+            $output .= '<button class="accordion-header">' . esc_html($category->name) . '</button>';
+            $output .= '<div class="accordion-content">';
+
+            // Tampilkan subkategori
+            $subcategories = display_subcategories($category->term_id, $taxonomy);
+            $output .= $subcategories;
+
+            $output .= '</div>'; // Tutup accordion-content
+            $output .= '</div>'; // Tutup accordion-item
+        }
+        return $output;
+    }
+    return '';
+}
+
+// Fungsi untuk menampilkan subkategori
+function display_subcategories($parent_id, $taxonomy) {
+    // Ambil semua subkategori
+    $subcategories = get_terms(array(
+        'taxonomy'   => $taxonomy,
+        'parent'     => $parent_id,
+        'hide_empty' => false,
+    ));
+
+    $output = '';
+    if (!empty($subcategories) && !is_wp_error($subcategories)) {
+        foreach ($subcategories as $subcategory) {
+            $output .= '<div class="accordion-sub-item">';
+            $output .= '<button class="accordion-sub-header">' . esc_html($subcategory->name) . '</button>';
+            $output .= '<div class="accordion-sub-content">';
+            // Tampilkan sub-subkategori
+            $output .= display_category_hierarchy($subcategory->term_id, $taxonomy);
+            $output .= '</div>'; // Tutup accordion-sub-content
+            $output .= '</div>'; // Tutup accordion-sub-item
+        }
+    }
+    return $output;
+}
+
+// Memulai tampilan dari kategori utama (parent = 0)
+echo '<div class="accordion-container">';
+echo display_category_hierarchy(0, 'category');
+echo '</div>';
+?>
+
+                
     </div>
+
+
+
+
     <div class="box-content product-container">
 
             <?php
