@@ -10,75 +10,7 @@
     </div>
 </section>
 
-<section class="container-tab">
-    <div class="tab" data-tabset="1">
-        <button class="tablinks tab-active" data-tabset="1">DISCOUNTS AND PROMOTIONS</button>
-        <button class="tablinks" data-tabset="1">NEW</button>
-        <button class="tablinks" data-tabset="1">FEATURED</button>
-        <div class="line" data-tabset="1"></div>
-    </div>
-    <div class="tabcontent-container" data-tabset="1">
 
-        <div class="tabcontent tab-active" data-tabset="1">
-            <div class="card-container">
-                <div class="card">
-                    <div class="card-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/product-img.png" alt="">
-                    </div>
-                    <div class="card-title">
-                        <h4>Judul Produk</h4>
-                    </div>
-                    <div class="card-footer">
-                        <button>Detail</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/product-img.png" alt="">
-                    </div>
-                    <div class="card-title">
-                        <h4>Judul Produk</h4>
-                    </div>
-                    <div class="card-footer">
-                        <button>Detail</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-timeinstrument.png" alt="">
-                    </div>
-                    <div class="card-title">
-                        <h4>Judul Produk</h4>
-                    </div>
-                    <div class="card-footer">
-                        <button>Detail</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-timeinstrument.png" alt="">
-                    </div>
-                    <div class="card-title">
-                        <h4>Judul Produk</h4>
-                    </div>
-                    <div class="card-footer">
-                        <button>Detail</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="tabcontent" data-tabset="1">
-            <h3>Paris</h3>
-            <p>Paris is the capital of France.</p>
-        </div>
-
-        <div class="tabcontent" data-tabset="1">
-            <h3>Tokyo</h3>
-            <p>Tokyo is the capital of Japan.</p>
-        </div>
-    </div>
-</section>
 
 <section id="article-related">
     <div>

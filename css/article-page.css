@@ -98,11 +98,14 @@ section#article .article-container .card {
   width: 80%;
   /* background-color: blanchedalmond; */
 }
-section#article .article-container .card img {
-  width: 30%;
+section#article .article-container .card .card-header {
+  width: 300px;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+}
+section#article .article-container .card .card-header img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
 }
 section#article .article-container .card span {
   color: gray;
@@ -110,6 +113,7 @@ section#article .article-container .card span {
 section#article .article-container .card p {
   overflow: hidden;
   height: 100px;
+  width: 50%;
 }
 section#article .article-container .card a {
   color: black;
@@ -169,7 +173,9 @@ section#article .article-container .card .card-footer {
 }
 #related-product-container .card-container {
   display: grid;
+  max-width: 1400px;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin: auto;
   gap: 28px;
   margin-top: 70px;
 }
@@ -179,7 +185,7 @@ section#article .article-container .card .card-footer {
   text-align: center;
 }
 #related-product-container .card-container .card img {
-  max-width: 100%;
+  max-width: 90%;
   max-height: 79%;
   background-size: cover;
 }
