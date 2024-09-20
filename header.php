@@ -45,7 +45,9 @@
     </div>
 
     <nav>
-        <h1>Logo</h1>
+        <div class="logo">
+            <img src="<?php echo get_template_directory_uri(); ?>\assets\img\logo-taharica-instruments.png" alt="logo">
+        </div>
         <ul class="">
             <li><a href="#">Beranda</a></li>
             <li><a href="#">Produk</a></li>
