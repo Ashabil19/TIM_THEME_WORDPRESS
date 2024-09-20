@@ -1,5 +1,16 @@
 <?php get_header(); ?>
 
+<section id="article-hero-mobile">
+    <h1>OUR ARTICLE</h1>
+    <div class="article-mobile-txt">
+        <p>
+            Time Instrument Indonesia publishes various informative news and
+            updates related to instrumental
+        </p>
+        <a href="">Read More</a>
+    </div>
+</section>
+
 <section id="article-hero-container">
     <div class="line-article-hero"></div>
     <div class="article-hero">
@@ -42,33 +53,35 @@
         if ($query->have_posts()) :
             // Loop untuk setiap artikel yang ditemukan
             while ($query->have_posts()) : $query->the_post(); ?>
-                <div class="card">
-                    <?php if (has_post_thumbnail()) : ?>
-                        <!-- Menampilkan gambar unggulan post -->
-                        <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>" />
-                    <?php else : ?>
-                        <!-- Menampilkan gambar default jika tidak ada gambar unggulan -->
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/article-pages/tes-article.png" alt="" />
-                    <?php endif; ?>
-                    <div>
-                        <h1> <?php
-                                // Mengambil judul dan menampilkan dua kata pertama
-                                $title = wp_trim_words(get_the_title(), 4, '...');
-                                echo esc_html($title);
+                <a href="">
+                    <div class="card">
+                        <?php if (has_post_thumbnail()) : ?>
+                            <!-- Menampilkan gambar unggulan post -->
+                            <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>" />
+                        <?php else : ?>
+                            <!-- Menampilkan gambar default jika tidak ada gambar unggulan -->
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/article-pages/tes-article.png" alt="" />
+                        <?php endif; ?>
+                        <div>
+                            <h1> <?php
+                                    // Mengambil judul dan menampilkan dua kata pertama
+                                    $title = wp_trim_words(get_the_title(), 4, '...');
+                                    echo esc_html($title);
+                                    ?>
+                            </h1>
+                            <span><?php echo get_the_date(); ?></span>
+                            <p>
+                                <?php
+                                $excerpt = wp_trim_words(get_the_excerpt(), 50, '...');
+                                echo esc_html($excerpt);
                                 ?>
-                        </h1>
-                        <span><?php echo get_the_date(); ?></span>
-                        <p>
-                            <?php
-                            $excerpt = wp_trim_words(get_the_excerpt(), 50, '...');
-                            echo esc_html($excerpt);
-                            ?>
-                        </p>
-                        <div class="card-footer">
-                            <a href="<?php the_permalink(); ?>">View Detail</a>
+                            </p>
+                            <div class="card-footer">
+                                <a href="<?php the_permalink(); ?>">View Detail</a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
         <?php endwhile; // Mengakhiri loop
         else :
             echo '<p>No articles found.</p>'; // Pesan jika tidak ada artikel ditemukan

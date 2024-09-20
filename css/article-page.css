@@ -196,3 +196,87 @@ section#article .article-container .card .card-footer {
   margin: auto;
   font-weight: normal;
 }
+section#article-hero-mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  section#article-hero-container {
+    display: none;
+  }
+  div.separator-article {
+    display: none;
+  }
+  section#article-hero-mobile {
+    display: block;
+    width: 100%;
+    height: 190px;
+    background: rgb(237, 27, 36);
+    background: linear-gradient(
+      135deg,
+      rgba(237, 27, 36, 1) 25%,
+      rgba(21, 39, 147, 1) 83%
+    );
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+  section#article-hero-mobile h1 {
+    color: white;
+    font-weight: normal;
+    font-size: 24px;
+  }
+  section#article-hero-mobile .article-mobile-txt {
+    width: 65%;
+    margin: 20px auto;
+    color: white;
+    border-top: 3px solid white;
+  }
+  section#article-hero-mobile .article-mobile-txt p {
+    font-size: 12px;
+    margin-top: 12px;
+  }
+  section#article-hero-mobile .article-mobile-txt a {
+    color: white;
+  }
+  section#article {
+    /* background-color: pink; */
+  }
+  section#article .article-container .card {
+    /* background-color: aqua; */
+    height: 116px;
+    gap: 0 6px;
+  }
+  section#article .article-container .card img {
+    width: 131px;
+    height: 116px;
+  }
+  section#article .article-container .card div {
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+  }
+  section#article .article-container .card div h1 {
+    font-size: 14px;
+    margin: 0;
+  }
+  section#article .article-container .card div span {
+    font-size: 8px;
+    margin-top: 4px;
+  }
+  section#article .article-container .card div p {
+    font-size: 9px;
+    height: 40px;
+    margin-top: 4px;
+  }
+  section#article .article-container .card div a {
+    font-size: smaller;
+    margin-top: 2px;
+  }
+  section#related-product-container,
+  div.quotes-footer {
+    display: none;
+  }
+  div.paggination {
+    margin-bottom: 80px;
+  }
+}
