@@ -55,13 +55,15 @@
             while ($query->have_posts()) : $query->the_post(); ?>
                 <a href="">
                     <div class="card">
-                        <?php if (has_post_thumbnail()) : ?>
-                            <!-- Menampilkan gambar unggulan post -->
-                            <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>" />
-                        <?php else : ?>
-                            <!-- Menampilkan gambar default jika tidak ada gambar unggulan -->
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/article-pages/tes-article.png" alt="" />
-                        <?php endif; ?>
+                        <div class="card-header">
+                            <?php if (has_post_thumbnail()) : ?>
+                                <!-- Menampilkan gambar unggulan post -->
+                                <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>" />
+                            <?php else : ?>
+                                <!-- Menampilkan gambar default jika tidak ada gambar unggulan -->
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/article-pages/tes-article.png" alt="" />
+                            <?php endif; ?>
+                        </div>
                         <div>
                             <h1> <?php
                                     // Mengambil judul dan menampilkan dua kata pertama
