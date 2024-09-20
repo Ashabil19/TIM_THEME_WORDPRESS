@@ -27,3 +27,15 @@ tabsProduct.forEach((tab) => {
     contentToShow.classList.add("tab-product-active");
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const imgItems = document.querySelectorAll(".img-item img");
+  const imgPreview = document.querySelector(".img-preview img");
+
+  imgItems.forEach((item) => {
+    item.addEventListener("click", function () {
+      const newSrc = this.getAttribute("src");
+      imgPreview.setAttribute("src", newSrc);
+    });
+  });
+});

@@ -168,7 +168,7 @@ section#related-article-product
   img {
   width: 100%;
   height: 100%;
-  background-size: cover;
+  object-fit: cover;
 }
 section#related-article-product
   .article-container
@@ -222,5 +222,5 @@ section#related-product-detail
   img {
   width: 100%;
   height: 100%;
-  background-size: cover;
+  object-fit: cover;
 }
