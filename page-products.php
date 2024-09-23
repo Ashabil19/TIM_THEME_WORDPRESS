@@ -79,9 +79,6 @@
                 
     </div>
 
-
-
-
     <div class="box-content product-container">
 
             <?php
@@ -124,7 +121,14 @@
                     echo 'No posts found.';
                 endif;
             ?>
+    </div>
+
+
+
 </section>
+
+
+
 <div class="paggination" style="margin-bottom:100px;">
         <div class="prev-paggination">
             <?php if (get_previous_posts_link()) : ?>

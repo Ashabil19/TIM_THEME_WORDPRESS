@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/article-page.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/detail-product-page.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/product-page.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/article-detail.css">
+
 
 
     <title><?php bloginfo('name'); ?></title>
@@ -30,12 +32,13 @@
             <img src="<?php echo get_template_directory_uri(); ?>\assets\img\logo-taharica-instruments.png" alt="logo">
         </div>
         <ul class="">
-            <li><a href="#">Beranda</a></li>
-            <li><a href="#">Produk</a></li>
-            <li><a href="#">Artikel</a></li>
-            <li><a href="#">Produk Terlaris</a></li>
-            <li><a href="#">Hubungi Kami</a></li>
+            <li><a href="<?php echo home_url('/'); ?>">Beranda</a></li>
+            <li><a href="<?php echo home_url('/products'); ?>">Produk</a></li>
+            <li><a href="<?php echo home_url('/article'); ?>">Artikel</a></li>
+            <!-- <li><a href="<?php echo home_url('/produk-terlaris'); ?>">Produk Terlaris</a></li> -->
+            <li><a href="<?php echo home_url('/hubungi-kami'); ?>">Hubungi Kami</a></li>
         </ul>
+
         <div class="hamburger-icon">
             <span></span>
             <span></span>
