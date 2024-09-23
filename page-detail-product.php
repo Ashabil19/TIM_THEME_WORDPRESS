@@ -95,7 +95,12 @@ if ($product_id > 0) {
                     </div>
                     <div class="article-card-content">
                         <h3><?php the_title(); ?></h3>
-                        <p><?php the_excerpt(); ?></p>
+                        <p>
+                                <?php
+                                $excerpt = wp_trim_words(get_the_excerpt(), 20, '...');
+                                echo esc_html($excerpt);
+                                ?>
+                            </p>
                     </div>
                 </div>
             <?php
