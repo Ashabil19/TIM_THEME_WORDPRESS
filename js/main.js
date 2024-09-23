@@ -50,33 +50,78 @@ tabs.forEach((tab) => {
   });
 });
 
-
-
 // filter container
 
+document.addEventListener("DOMContentLoaded", function () {
+  const headers = document.querySelectorAll(
+    ".accordion-header, .accordion-sub-header"
+  );
 
-document.addEventListener('DOMContentLoaded', function() {
-  const headers = document.querySelectorAll('.accordion-header, .accordion-sub-header');
-
-  headers.forEach(header => {
-    header.addEventListener('click', function() {
+  headers.forEach((header) => {
+    header.addEventListener("click", function () {
       const parentItem = header.parentElement;
       const content = header.nextElementSibling;
 
       // Toggle current section
-      if (content && content.style.display === 'block') {
-        content.style.display = 'none';
-        parentItem.classList.remove('active');
+      if (content && content.style.display === "block") {
+        content.style.display = "none";
+        parentItem.classList.remove("active");
       } else {
-        content.style.display = 'block';
-        parentItem.classList.add('active');
+        content.style.display = "block";
+        parentItem.classList.add("active");
       }
     });
   });
 });
 
+// hero carousel
+let list = document.querySelector(".slider .list");
+let items = document.querySelectorAll(".slider .list .item");
+let dots = document.querySelectorAll(".slider .dots li");
 
+let active = 0;
 
+function reloadSlider() {
+  let checkLeft = items[active].offsetLeft;
+  list.style.left = -checkLeft + "px";
 
+  let lastActiveDot = document.querySelector(".slider .dots li.active");
+  lastActiveDot.classList.remove("active");
+  dots[active].classList.add("active");
+}
 
+// Fungsi untuk pindah ke slide berikutnya secara otomatis
+function autoSlide() {
+  active++;
+  if (active >= items.length) {
+    active = 0; // Kembali ke slide pertama setelah slide terakhir
+  }
+  reloadSlider();
+}
 
+// Mengatur interval untuk pindah slide otomatis setiap 3 detik
+let slideInterval = setInterval(autoSlide, 3000);
+
+dots.forEach((li, key) => {
+  li.addEventListener("click", function () {
+    active = key;
+    reloadSlider();
+    clearInterval(slideInterval);
+    slideInterval = setInterval(autoSlide, 3000);
+  });
+});
+
+//end hero carousel
+
+// carousel kategori
+const carousel = document.querySelector(".carousel-kategori");
+const arrowBtn = document.querySelectorAll(".carousel-container button");
+const firstCardWidth = carousel.querySelector(".card-kategori").offsetWidth;
+
+arrowBtn.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    carousel.scrollLeft += btn.id === "prev" ? -firstCardWidth : firstCardWidth;
+  });
+});
+
+// end carousel kategori

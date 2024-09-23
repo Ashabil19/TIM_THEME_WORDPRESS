@@ -163,7 +163,7 @@
             <h3>Nama Produk</h3>
         </div>
         <div class="card">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/article-pages/tes-tinggi.jpg" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/article-pages/tes-article.png" alt="" />
             <h3>Nama Produk</h3>
         </div>
         <div class="card">

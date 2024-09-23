@@ -20,6 +20,7 @@ section#article-hero-container .article-hero {
   background-color: #152793;
   display: flex;
   margin-top: 20px;
+  max-width: 1400px;
 }
 section#article-hero-container .article-hero .article-hero1 {
   width: 50%;
@@ -100,20 +101,22 @@ section#article .article-container .card {
 }
 section#article .article-container .card .card-header {
   width: 300px;
-  height: 100%;
+  height: 195px;
 }
 section#article .article-container .card .card-header img {
   width: 100%;
   height: 100%;
-  background-size: cover;
+  object-fit: cover;
 }
 section#article .article-container .card span {
   color: gray;
 }
 section#article .article-container .card p {
   overflow: hidden;
-  height: 100px;
+  height: 90px;
   width: 50%;
+
+  margin-bottom: 8px;
 }
 section#article .article-container .card a {
   color: black;
@@ -205,6 +208,7 @@ section#article .article-container .card .card-footer {
 section#article-hero-mobile {
   display: none;
 }
+
 @media (max-width: 768px) {
   section#article-hero-container {
     display: none;
@@ -249,15 +253,19 @@ section#article-hero-mobile {
   section#article .article-container .card {
     /* background-color: aqua; */
     height: 116px;
+    width: 90vw;
     gap: 0 6px;
   }
-  section#article .article-container .card img {
+  section#article .article-container .card .card-header {
+    width: 131px;
+  }
+  section#article .article-container .card .card-header img {
     width: 131px;
     height: 116px;
+    object-fit: cover;
   }
   section#article .article-container .card div {
     padding: 0;
-
     display: flex;
     flex-direction: column;
   }
@@ -273,6 +281,7 @@ section#article-hero-mobile {
     font-size: 9px;
     height: 40px;
     margin-top: 4px;
+    width: 90%;
   }
   section#article .article-container .card div a {
     font-size: smaller;

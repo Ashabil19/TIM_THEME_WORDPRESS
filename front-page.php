@@ -1,25 +1,118 @@
 <?php get_header(); ?>
 
 
-<section id="hero">
-    <div class="hero-banner">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero-content.png" alt="">
+<div class="hero">
+    <div class="slider">
+        <div class="list">
+            <div class="item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner time.jpg" alt="" />
+            </div>
+            <div class="item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner time 2.png" alt="" />
+            </div>
+            <div class="item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner time 3.png" alt="" />
+            </div>
+            <div class="item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner time 4.png" alt="" />
+            </div>
+        </div>
+        <ul class="dots">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
     </div>
-    <div class="service-hero-container">
-        <div class="service-hero"></div>
+    <div class="slogan-container">
+        <div class="slogan-content">
+            <div class="slogan-header">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slogan1.png" alt="" />
+            </div>
+            <h4>Best Quality</h4>
+            <p>
+                It's content strategy gone awry right from the start are wasn't.
+            </p>
+        </div>
+        <div class="slogan-content">
+            <div class="slogan-header">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slogan1.png" alt="" />
+            </div>
+            <h4>Best Quality</h4>
+            <p>
+                It's content strategy gone awry right from the start are wasn't.
+            </p>
+        </div>
+        <div class="slogan-content">
+            <div class="slogan-header">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slogan1.png" alt="" />
+            </div>
+            <h4>Best Quality</h4>
+            <p>
+                It's content strategy gone awry right from the start are wasn't.
+            </p>
+        </div>
     </div>
-</section>
+</div>
+
+<div class="home-content">
+    <div class="home-content-container">
+        <div class="content">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner time 3.png" alt="" />
+        </div>
+        <div class="content">
+            <h1>Kenapa Time Instrument?</h1>
+            <br />
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error,
+                soluta doloribus. Omnis facilis modi rerum quam earum enim fugiat
+                adipisci temporibus dolor laborum, totam sapiente possimus eos,
+                veritatis natus fugit officiis in quidem officia eligendi rem
+                voluptatibus, ratione expedita? Doloremque placeat animi, quo iure,
+                quae magni modi beatae distinctio enim dolorem ad saepe in et? Sequi
+                quis, tempore aspernatur explicabo accusamus mollitia ullam rerum
+                placeat consequatur corrupti sed illo doloremque quo cum dicta non
+                quos magnam facere. Architecto, odio at.
+            </p>
+        </div>
+    </div>
+</div>
 
 
+<div class="home-related-article">
+    <div class="related-article">
+        <div class="article-card">
+            <div class="article-card-head">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner time.jpg"" alt="" />
+          </div>
+          <div class=" article-card-bages">
+                <h3>Artikel</h3>
+            </div>
+            <div class="article-title">
+                <h3>
+                    Pengukur Suhu Ruangan: Alat Penting Untuk Kenyamanan dan Efesiensi
+                    Energi
+                </h3>
+            </div>
+        </div>
+        <div class="article-card">
+            <div class="article-card-head">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner time.jpg"" alt="" />
+          </div>
+          <div class=" article-card-bages">
+                <h3>Artikel</h3>
+            </div>
+            <div class="article-title">
+                <h3>
+                    Pengukur Suhu Ruangan: Alat Penting Untuk Kenyamanan dan Efesiensi
+                    Energi
+                </h3>
+            </div>
+        </div>
+    </div>
+</div>
 
-<section id="article-related">
-    <div>
-        <h3>Article</h3>
-    </div>
-    <div>
-        <h3>Article</h3>
-    </div>
-</section>
+
 
 
 <section class="container-tab">
@@ -136,14 +229,78 @@
     </div>
 </section>
 
-<section class="categories-home">
-    <div class="categories-content"></div>
-    <div class="categories-content"></div>
-    <div class="categories-content"></div>
-    <div class="categories-content"></div>
-    <div class="categories-content"></div>
-    <div class="categories-content"></div>
-    <div class="categories-content"></div>
+<section id="kategori-home">
+    <div class="wrapper-kategori">
+        <h1>Popular Categories</h1>
+        <hr / style="margin-bottom: 10px;">
+        <div class="carousel-container">
+            <button id="prev">&#10094;</button>
+            <div class="carousel-kategori">
+                <ul>
+                    <li class="card-kategori">
+                        <a href="">
+                            <div
+                                class="img-kategori"
+                                style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/kategori1.jpg)">
+                                <h2>Category 1</h2>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="card-kategori">
+                        <div
+                            class="img-kategori"
+                            style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/kategori2.png)">
+                            <h2>Category 2</h2>
+                        </div>
+                    </li>
+                    <li class="card-kategori">
+                        <div
+                            class="img-kategori"
+                            style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/kategori3.jpg)">
+                            <h2>Category 3</h2>
+                        </div>
+                    </li>
+                    <li class="card-kategori">
+                        <div
+                            class="img-kategori"
+                            style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/kategori4.jpg)">
+                            <h2>Category 4</h2>
+                        </div>
+                    </li>
+                    <li class="card-kategori">
+                        <div
+                            class="img-kategori"
+                            style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/kategori5.png)">
+                            <h2>Category 5</h2>
+                        </div>
+                    </li>
+                    <li class="card-kategori">
+                        <div
+                            class="img-kategori"
+                            style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/kategori6.png)">
+                            <h2>Category 6</h2>
+                        </div>
+                    </li>
+                    <li class="card-kategori">
+                        <div
+                            class="img-kategori"
+                            style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/kategori7.png)">
+                            <h2>Category 7</h2>
+                        </div>
+                    </li>
+                    <li class="card-kategori">
+                        <div
+                            class="img-kategori"
+                            style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/kategori8.png)">
+                            <h2>Category 8</h2>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <button id="next">&#10095;</button>
+        </div>
+    </div>
 </section>
 
 
