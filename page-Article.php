@@ -97,7 +97,7 @@
 </section>
 
 
-<div class="paggination">
+<div style="margin-bottom: 50px" class="paggination">
     <div class="prev-paggination">
         <?php if (get_previous_posts_link()) : ?>
             <?php previous_posts_link('<img src="' . get_template_directory_uri() . '/assets/img/article-pages/prev-pag-icon.svg" alt="" /> <span class="previous-link">Previous</span>'); ?>

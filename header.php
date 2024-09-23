@@ -17,30 +17,9 @@
 
 
 <body <?php body_class(); ?>>
-
-    <!-- 
-<div class="nav-contact" style="margin-top: 20px;">
-    <div class="nav-contact-icon">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/TelephoneOutbound.svg" alt="">
-        <span>021 8690 6777</span>
-    </div>
-    <div class="nav-contact-icon">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Whatsapp.svg" alt="">
-        <span>0852-1556-0669 (Mr. Almas)</span>
-    </div>
-    <div class="nav-contact-icon">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Whatsapp.svg" alt="">
-        <span>0819‑4401‑4959(Mr. Arya)</span>
-    </div>
-    <div class="nav-contact-icon">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mail.svg" alt="">
-        <span>marketing.time@taharica.com</span>
-    </div>
-</div> -->
-
     <div class="nav-search-bar">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-timeinstrument.png" alt="">
-        <div class="search-input">
+        <img style="width: 20%;" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-taharica-instruments.png"  alt="">
+        <div style="width: 80%" class="search-input">
             <input type="search" name="" id="" placeholder="Search Product">
             <button><img src="<?php echo get_template_directory_uri(); ?>/assets/img/search-icon.svg" alt=""></button>
         </div>
