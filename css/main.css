@@ -19,6 +19,7 @@ header.main li {
 header.main li a {
   /* padding: 0 1.5rem; */
   display: block;
+  /* color: red; */
 }
 div.nav-search-bar {
   display: flex;
@@ -60,7 +61,7 @@ nav {
   padding: 20px 3.5rem;
   box-sizing: border-box;
   align-items: center;
-  background-color: #152793;
+  background-color: #283891;
   top: 0;
   z-index: 1;
 }
@@ -72,7 +73,7 @@ nav ul li a {
   position: relative;
   text-decoration: none;
   color: white;
-  font-weight: bold;
+  
   font-size: 16px;
 }
 

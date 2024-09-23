@@ -20,7 +20,7 @@
 
 .accordion-item {
   margin-bottom: 10px;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   border-radius: 4px;
 }
 
@@ -36,6 +36,9 @@
   padding: 10px;
   font-size: 16px;
   transition: background-color 0.3s ease;
+  color: #4e4e4e;
+
+  ;
 }
 
 .accordion-header:hover,
@@ -46,14 +49,15 @@
 
 .accordion-content, .accordion-sub-content {
   display: none;
-  padding-left: 20px;
+  /* padding-left: 20px; */
   background-color: #f9f9f9;
-  border-top: 1px solid #ddd;
+  /* border-top: 1px solid #ddd; */
 }
 
 .accordion-sub-item {
-  margin-left: 10px;
-  border-top: 1px solid #ddd;
+  /* margin-left: 10px; */
+  /* border-top: 1px solid #ddd; */
+  
 }
 
 .accordion-item.active .accordion-content,

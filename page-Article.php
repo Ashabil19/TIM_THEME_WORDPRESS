@@ -4,7 +4,7 @@
     <h1>OUR ARTICLE</h1>
     <div class="article-mobile-txt">
         <p>
-            Time Instrument Indonesia publishes various informative news and
+            Taharica Instruments publishes various informative news and
             updates related to instrumental
         </p>
         <a href="">Read More</a>
@@ -23,8 +23,8 @@
         </div>
         <div class="article-hero2">
             <div class="logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/article-pages/logo time 2.png" alt="" />
-                <h1>TIMEINSTRUMENT INDONESIA</h1>
+                <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/img/article-pages/logo time 2.png" alt="" /> -->
+                <h1>TAHARICA INSTRUMENTS INDONESIA</h1>
             </div>
             <div class="line2-article-hero"></div>
             <p>
@@ -43,7 +43,7 @@
         // Menentukan query untuk menampilkan 8 artikel per halaman
         $args = array(
             'post_type' => 'post', // Hanya menampilkan tipe post standar
-            'posts_per_page' => 6, // Menampilkan 8 post per halaman
+            'posts_per_page' => 6, // Menampilkan 6 post per halaman
             'paged' => get_query_var('paged') ? get_query_var('paged') : 1, // Mendukung pagination
         );
         // Menjalankan query untuk mendapatkan post
@@ -53,7 +53,7 @@
         if ($query->have_posts()) :
             // Loop untuk setiap artikel yang ditemukan
             while ($query->have_posts()) : $query->the_post(); ?>
-                <a href="">
+                <a href="<?php the_permalink(); ?>">
                     <div class="card">
                         <div class="card-header">
                             <?php if (has_post_thumbnail()) : ?>
@@ -78,6 +78,19 @@
                                 echo esc_html($excerpt);
                                 ?>
                             </p>
+                            <!-- Tampilkan tags -->
+                            <?php
+                            $tags = get_the_tags();
+                            if ($tags) {
+                                echo '<div class="tags">';
+                                foreach ($tags as $tag) {
+                                    echo '<span>' . esc_html($tag->name) . '</span> ';
+                                }
+                                echo '</div>';
+                            } else {
+                                echo '<p>No tags available</p>';
+                            }
+                            ?>
                             <div class="card-footer">
                                 <a href="<?php the_permalink(); ?>">View Detail</a>
                             </div>
@@ -97,7 +110,7 @@
 </section>
 
 
-<div class="paggination">
+<div style="margin-bottom: 50px" class="paggination">
     <div class="prev-paggination">
         <?php if (get_previous_posts_link()) : ?>
             <?php previous_posts_link('<img src="' . get_template_directory_uri() . '/assets/img/article-pages/prev-pag-icon.svg" alt="" /> <span class="previous-link">Previous</span>'); ?>
@@ -129,29 +142,12 @@
             <?php next_posts_link('<span style="color:#292929; text-decoration:none;" >Next</span> <img src="' . get_template_directory_uri() . '/assets/img/article-pages/next-pag-icon.svg" alt="" />', $query->max_num_pages); ?>
         <?php else : ?>
             <span style="color:#292929; text-decoration:none;">Next</span>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/article-pages/next-pag-icon.svg" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/article-pages/next-pag-ico" alt="" />
         <?php endif; ?>
     </div>
 </div>
 
-<!-- <div class="paggination">
-    <div class="prev-paggination">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/article-pages/prev-pag-icon.svg" alt="" />
-        <span>Previous</span>
-    </div>
-    <div class="number-paggination">
-        <span>1</span>
-        <span class="active">2</span>
-        <span>3</span>
-        <span class="mobile-none">...</span>
-        <span class="mobile-none">67</span>
-        <span class="mobile-none">68</span>
-    </div>
-    <div class="next-paggination">
-        <span>Next</span>
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/article-pages/next-pag-icon.svg" alt="" />
-    </div>
-</div> -->
+
 
 <section id="related-product-container">
     <div class="related-product">
