@@ -5,13 +5,13 @@
     <div class="slider">
         <div class="list">
             <div class="item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner time.jpg" alt="" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner-tim.jpg" alt="" />
             </div>
             <div class="item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner time 2.png" alt="" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner-tim2.jpg" alt="" />
             </div>
             <div class="item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner time 3.png" alt="" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner-tim3.jpg" alt="" />
             </div>
             <div class="item">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner time 4.png" alt="" />

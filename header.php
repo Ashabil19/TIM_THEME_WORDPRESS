@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/detail-product-page.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/product-page.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/article-detail.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/hubungi-kami.css">
 
 
 
@@ -20,7 +21,7 @@
 
 <body <?php body_class(); ?>>
     <div class="nav-search-bar">
-        <img style="width: 20%;" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-taharica-instruments.png"  alt="">
+        <img style="width: 20%;" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-taharica-instruments.png" alt="">
         <div style="width: 80%" class="search-input">
             <input type="search" name="" id="" placeholder="Search Product">
             <button><img src="<?php echo get_template_directory_uri(); ?>/assets/img/search-icon.svg" alt=""></button>
@@ -45,5 +46,3 @@
             <span></span>
         </div>
     </nav>
-
-
