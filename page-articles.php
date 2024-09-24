@@ -74,7 +74,7 @@
                             <span><?php echo get_the_date(); ?></span>
                             <p>
                                 <?php
-                                $excerpt = wp_trim_words(get_the_excerpt(), 50, '...');
+                                $excerpt = wp_trim_words(get_the_excerpt(), 20, '...');
                                 echo esc_html($excerpt);
                                 ?>
                             </p>

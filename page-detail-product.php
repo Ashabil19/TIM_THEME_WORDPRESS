@@ -111,6 +111,41 @@ if ($product_id > 0) {
                 </div>
                 <button>Read More</button>
             </section>
+            <section id="related-article-product">
+                <h2>Related Article</h2>
+                <div class="article-container">
+                    <?php
+                    // Ambil artikel terkait (misalnya dengan query)
+                    $related_articles = new WP_Query([
+                        'post_type' => 'post',
+                        'posts_per_page' => 3,
+                        'orderby' => 'rand'
+                    ]);
+                    if ($related_articles->have_posts()) :
+                        while ($related_articles->have_posts()) : $related_articles->the_post();
+                    ?>
+                            <div class="article-card">
+                                <div class="article-card-head">
+                                    <img src="<?php the_post_thumbnail_url(); ?>" alt="" />
+                                </div>
+                                <div class="article-card-content">
+                                    <h3><?php the_title(); ?></h3>
+                                    <p>
+                                        <?php
+                                        $excerpt = wp_trim_words(get_the_excerpt(), 20, '...');
+                                        echo esc_html($excerpt);
+                                        ?>
+                                    </p>
+                                </div>
+                            </div>
+                    <?php
+                        endwhile;
+                        wp_reset_postdata();
+                    endif;
+                    ?>
+                </div>
+                <button>Read More</button>
+            </section>
 
             <section id="related-product-detail">
                 <h2>Related Product</h2>
