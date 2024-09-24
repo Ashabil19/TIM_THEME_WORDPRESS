@@ -160,7 +160,7 @@
             var company = document.getElementById('company').value;
             var message = document.getElementById('message').value;
 
-            if (firstName == "" || company == "" || email == "" || phone == "" || message == "") {
+            if (name == "" || company == "" || email == "" || phone == "" || message == "") {
                 alert("Please fill in all required fields.");
                 return false;
             }
