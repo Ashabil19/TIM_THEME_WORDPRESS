@@ -79,10 +79,10 @@
                             $mail->Port = 587;
 
                             // Set pengirim email
-                            $mail->setFrom($email, $name . ' ' . $last_name); // Tetapkan email pengguna sebagai pengirim
+                            $mail->setFrom($email, $name); // Tetapkan email pengguna sebagai pengirim
 
                             // Tambahkan Reply-To dari pengguna yang submit form
-                            $mail->addReplyTo($email, $name . ' ' . $last_name); // Alamat email pengguna yang mengisi form
+                            $mail->addReplyTo($email, $name); // Alamat email pengguna yang mengisi form
 
                             // Set penerima email (admin)
                             $mail->addAddress('ashabilsyauqi@gmail.com', 'Ashabil Syauqi'); // Email tujuan (admin)

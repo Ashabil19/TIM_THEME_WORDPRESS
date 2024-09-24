@@ -467,10 +467,6 @@ footer .footer-container .menu-footer a {
 
 /* medium desktop */
 @media (max-width: 1280px) {
-  div.nav-search-bar {
-    background-color: rebeccapurple;
-  }
-
   section.container-tab {
     box-sizing: border-box;
     padding: 0 2rem;
