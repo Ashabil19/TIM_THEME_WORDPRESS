@@ -34,7 +34,7 @@
         <ul class="">
             <li><a href="<?php echo home_url('/'); ?>">Beranda</a></li>
             <li><a href="<?php echo home_url('/products'); ?>">Produk</a></li>
-            <li><a href="<?php echo home_url('/article'); ?>">Artikel</a></li>
+            <li><a href="<?php echo home_url('/articles'); ?>">Artikel</a></li>
             <!-- <li><a href="<?php echo home_url('/produk-terlaris'); ?>">Produk Terlaris</a></li> -->
             <li><a href="<?php echo home_url('/hubungi-kami'); ?>">Hubungi Kami</a></li>
         </ul>
