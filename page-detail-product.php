@@ -100,7 +100,7 @@ if ($product_id > 0) {
                                 $excerpt = wp_trim_words(get_the_excerpt(), 20, '...');
                                 echo esc_html($excerpt);
                                 ?>
-                            </p>
+                        </p>
                     </div>
                 </div>
             <?php
