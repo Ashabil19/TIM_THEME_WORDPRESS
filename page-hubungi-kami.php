@@ -38,7 +38,7 @@
             // Akses ke database global
             global $wpdb;
             // Flag untuk mengetahui apakah form berhasil dikirim
-            $form_submitted = false;
+            $form_submitted = false;local
 
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -86,7 +86,7 @@
 
                             // Set penerima email (admin)
                             $mail->addAddress('ashabilsyauqi@gmail.com', 'Ashabil Syauqi'); // Email tujuan (admin)
-
+å
                             // Set isi email
                             $mail->isHTML(true); // Email menggunakan format HTML
                             $mail->Subject = 'New Contact Form Submission';
@@ -156,7 +156,7 @@
         function validateForm() {
             var name = document.getElementById('name').value;
             var email = document.getElementById('email').value;
-            var phone = document.getElementById('phone_number').value;
+            var phone = document.getElementById('phone_number').value;å
             var company = document.getElementById('company').value;
             var message = document.getElementById('message').value;
 
