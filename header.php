@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/product-page.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/article-detail.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/hubungi-kami.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/tentang-kami.css">
 
 
 
@@ -36,6 +37,7 @@
             <li><a href="<?php echo home_url('/'); ?>">Beranda</a></li>
             <li><a href="<?php echo home_url('/products'); ?>">Produk</a></li>
             <li><a href="<?php echo home_url('/articles'); ?>">Artikel</a></li>
+            <li><a href="<?php echo home_url('/tentang-kami'); ?>">Tentang Kami</a></li>
             <!-- <li><a href="<?php echo home_url('/produk-terlaris'); ?>">Produk Terlaris</a></li> -->
             <li><a href="<?php echo home_url('/hubungi-kami'); ?>">Hubungi Kami</a></li>
         </ul>
