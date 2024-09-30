@@ -252,7 +252,6 @@ section#article-hero-mobile {
     /* background-color: pink; */
   }
   section#article .article-container .card {
-    /* background-color: aqua; */
     height: 116px;
     width: 90vw;
     gap: 0 6px;
@@ -265,10 +264,13 @@ section#article-hero-mobile {
     height: 116px;
     object-fit: cover;
   }
-  section#article .article-container .card div {
+  section#article .article-container .card div.card-text {
     padding: 0;
     display: flex;
     flex-direction: column;
+  }
+  section#article .article-container .card div.card-text a {
+    max-height: 116px;
   }
   section#article .article-container .card div h1 {
     font-size: 14px;
