@@ -24,7 +24,41 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/TelephoneOutbound.svg" alt="">
                 <span>+62 21 86906777</span>
             </div>
-        </div>    
+        </div>
+        <div class="form-container">
+            <h4>UNTUK REQUEST INFORMASI TENTANG PRODUK ATAU PERUSAHAAN KAMI</h4>
+            <h3>KONTAK KAMI SEGERA DIBAWAH INI</h3>
+            <form action="" method="post">
+                <div class="form-row">
+                    <div class="form-input">
+                        <label for="name">Your Name</label>
+                        <input type="text" name="name" id="name" required>
+                    </div>
+                    <div class="form-input">
+                        <label for="email">Your Email</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-input">
+                        <label for="phone_number">Phone Number</label>
+                        <input type="number" name="phone_number" id="phone_number" required>
+                    </div>
+                    <div class="form-input">
+                        <label for="company">Company</label>
+                        <input type="text" name="company" id="company">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-input">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" cols="100" rows="10" required></textarea>
+                    </div>
+                </div>
+                <button type="submit" name="submit_form">ASK A QUESTION</button>
+            </form>
+        </div>
+    </div>
 </section>
 
 <?php get_footer(); ?>
