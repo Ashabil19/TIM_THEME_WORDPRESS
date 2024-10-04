@@ -81,52 +81,55 @@
 
     <div class="box-content product-container">
 
-            <?php
-                $args = array(
-                    'post_type'      => 'product',
-                    'posts_per_page' => 6, 
-                );
-                $query = new WP_Query($args); 
-                if ($query->have_posts()) : 
-                    while ($query->have_posts()) : $query->the_post();
-                        ?>
-                         <a href="<?php echo home_url('/detail-product/?product_id=') . get_the_ID(); ?>" style="text-decoration: none; color: inherit;">
-                            <div class="card_product">
-                                <div class="card_header">
-                                    <div class="img-container">
-                                    <?php if (has_post_thumbnail()) : ?>
-                                        <!-- Menampilkan gambar unggulan post -->
-                                        <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>" />
-                                    <?php else : ?>
-                                        <!-- Menampilkan gambar default jika tidak ada gambar unggulan -->
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/article-pages/tes-article.png" alt="" />
-                                    <?php endif; ?>
-                                    </div>
-                                    <h4><?php the_title(); ?></h4>
-                                </div>
-                                <div class="card_body">
-                                    <?php
-                                        // Ambil data dari custom field 'deskripsi-singkat'
-                                        $deskripsi_singkat = get_field('deskripsi-singkat');
-                                        // Batasi menjadi 8 kata dengan wp_trim_words
-                                        $excerpt = wp_trim_words($deskripsi_singkat, 8, ' ...');
-                                    ?>
-                                    <p><?php echo esc_html($excerpt);?></p>
-                                    <button class="product_button">Detail</button>
-                                </div>
+    <?php
+        $args = array(
+            'post_type'      => 'product',
+            'posts_per_page' => 6, 
+        );
+        $query = new WP_Query($args); 
+        if ($query->have_posts()) : 
+            while ($query->have_posts()) : $query->the_post();
+                ?>
+                <a href="<?php echo home_url('/detail-product/?product_id=') . get_the_ID(); ?>" style="text-decoration: none; color: inherit;">
+                    <div class="card_product">
+                        <div class="card_header">
+                            <div class="img-container">
+                                <?php 
+                                // Ambil data gambar dari ACF 'foto-product'
+                                $foto_product = get_field('foto-product');
+                                
+                                if( $foto_product ) :
+                                    // Jika data gambar tersedia, tampilkan gambar
+                                    echo '<img src="' . esc_url($foto_product['url']) . '" alt="' . esc_attr($foto_product['alt']) . '">';
+                                endif;
+                                ?>
                             </div>
-                        </a>
-     
-                        <?php
+                            <h4><?php the_title(); ?></h4>
+                        </div>
+                        <div class="card_body">
+                            <?php
+                                // Ambil data dari custom field 'deskripsi-singkat'
+                                $deskripsi_singkat = get_field('deskripsi-singkat');
+                                if ($deskripsi_singkat) {
+                                    // Batasi menjadi 8 kata dengan wp_trim_words
+                                    $excerpt = wp_trim_words($deskripsi_singkat, 8, ' ...');
+                                    echo '<p>' . esc_html($excerpt) . '</p>';
+                                }
+                            ?>
+                            <button class="product_button">Detail</button>
+                        </div>
+                    </div>
+                </a>
+                <?php
+            endwhile;
+            wp_reset_postdata(); 
+        else :
+            echo '<p>No products found.</p>';
+        endif;
+    ?>
 
-                    endwhile;
-                    wp_reset_postdata(); 
 
 
-                else :
-                    echo 'No posts found.';
-                endif;
-            ?>
     </div>
 
 
