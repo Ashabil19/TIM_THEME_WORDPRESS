@@ -14,7 +14,6 @@
 
 
     <title><?php bloginfo('name'); ?></title>
-
     <?php wp_head(); ?>
 
 </head>
@@ -34,6 +33,12 @@
             <img src="<?php echo get_template_directory_uri(); ?>\assets\img\logo-taharica-instruments.png" alt="logo">
         </div>
         <ul class="">
+            <li>
+                <div class="search-box-mobile">
+                    <input type="text" class="input-search" placeholder="Type to Search...">
+                    <button class="btn-search"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/search-icon.svg" alt=""></button>
+                </div>
+            </li>
             <li><a href="<?php echo home_url('/'); ?>">Beranda</a></li>
             <li><a href="<?php echo home_url('/products'); ?>">Produk</a></li>
             <li><a href="<?php echo home_url('/articles'); ?>">Artikel</a></li>

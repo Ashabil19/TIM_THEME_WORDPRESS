@@ -64,7 +64,7 @@
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/article-pages/tes-article.png" alt="" />
                             <?php endif; ?>
                         </div>
-                        <div>
+                        <div class="card-text">
                             <h1> <?php
                                     // Mengambil judul dan menampilkan dua kata pertama
                                     $title = wp_trim_words(get_the_title(), 4, '...');
