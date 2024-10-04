@@ -94,7 +94,13 @@
                             <div class="card_product">
                                 <div class="card_header">
                                     <div class="img-container">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/article-pages/logo-time-2.png" alt="">
+                                    <?php if (has_post_thumbnail()) : ?>
+                                        <!-- Menampilkan gambar unggulan post -->
+                                        <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>" />
+                                    <?php else : ?>
+                                        <!-- Menampilkan gambar default jika tidak ada gambar unggulan -->
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/article-pages/tes-article.png" alt="" />
+                                    <?php endif; ?>
                                     </div>
                                     <h4><?php the_title(); ?></h4>
                                 </div>
