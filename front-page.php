@@ -79,21 +79,13 @@
 <div class="home-content">
     <div class="home-content-container">
         <div class="content">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner time 3.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/home_content.jpg" alt="" />
         </div>
         <div class="content">
             <h1>Kenapa Time Instrument?</h1>
             <br />
             <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error,
-                soluta doloribus. Omnis facilis modi rerum quam earum enim fugiat
-                adipisci temporibus dolor laborum, totam sapiente possimus eos,
-                veritatis natus fugit officiis in quidem officia eligendi rem
-                voluptatibus, ratione expedita? Doloremque placeat animi, quo iure,
-                quae magni modi beatae distinctio enim dolorem ad saepe in et? Sequi
-                quis, tempore aspernatur explicabo accusamus mollitia ullam rerum
-                placeat consequatur corrupti sed illo doloremque quo cum dicta non
-                quos magnam facere. Architecto, odio at.
+            Time Instrument adalah perusahaan terdepan dalam penjualan instrumen dan alat uji berkualitas tinggi. Dengan pengalaman bertahun-tahun di industri, kami menyediakan produk-produk yang dapat diandalkan dan inovatif untuk berbagai keperluan uji dan inspeksi
             </p>
         </div>
     </div>
