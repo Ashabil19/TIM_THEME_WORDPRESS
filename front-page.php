@@ -57,18 +57,18 @@
         </div>
         <div class="slogan-content">
             <div class="slogan-header">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slogan1.png" alt="" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slogan2.png" alt="" />
             </div>
-            <h4>Best Quality</h4>
+            <h4>Online Payment</h4>
             <p>
                 It's content strategy gone awry right from the start are wasn't.
             </p>
         </div>
         <div class="slogan-content">
             <div class="slogan-header">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slogan1.png" alt="" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slogan3.png" alt="" />
             </div>
-            <h4>Best Quality</h4>
+            <h4>Fast Delivery</h4>
             <p>
                 It's content strategy gone awry right from the start are wasn't.
             </p>
