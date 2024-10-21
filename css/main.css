@@ -181,7 +181,7 @@ nav ul {
 }
 .home-content {
   width: 100%;
-  background-color: rgba(217, 217, 217, 0.3);
+  background-color: rgba(217, 217, 217, 0.2);
   margin-top: 180px;
 }
 .home-content-container {
@@ -258,16 +258,18 @@ section.container-tab {
 section.container-tab .tabcontent .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
+  row-gap: 70px;
+  column-gap: 33px;
   max-width: 1400px;
   place-items: center;
   margin: auto;
+
   /* background-color: pink; */
 }
 section.container-tab .tabcontent .card-container .card {
   /* background-color: aqua; */
   width: 18rem;
-  height: 250px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -471,7 +473,7 @@ footer .footer-container .menu-footer a {
 }
 /* extra large destkop */
 
-/* medium desktop */
+/* large desktop */
 @media (max-width: 1280px) {
   section.container-tab {
     box-sizing: border-box;
@@ -485,7 +487,21 @@ footer .footer-container .menu-footer a {
     top: 85%;
   }
 }
+/* end large desktop */
+
+/* medium desktop */
+@media (max-width: 1024px) {
+  nav ul {
+    width: 50%;
+  }
+  .home-related-article .related-article .article-card {
+    width: 480px;
+  }
+}
+
+
 /* end medium desktop */
+
 @media (max-width: 768px) {
   div.nav-search-bar {
     display: none;

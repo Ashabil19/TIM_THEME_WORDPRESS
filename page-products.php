@@ -80,59 +80,77 @@
     </div>
 
     <div class="box-content product-container">
+        <?php
+            // Ambil halaman saat ini dari query var (default halaman 1)
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
-            <?php
-                $args = array(
-                    'post_type'      => 'product',
-                    'posts_per_page' => 6, 
+            // Ambil kategori dari filter (jika ada)
+            $category_id = isset($_POST['category_id']) ? intval($_POST['category_id']) : 0;
+
+            $args = array(
+                'post_type'      => 'product',
+                'posts_per_page' => 6, 
+                'paged'          => $paged,
+            );
+
+            // Tambahkan filter kategori jika kategori dipilih
+            if ($category_id) {
+                $args['tax_query'] = array(
+                    array(
+                        'taxonomy' => 'category',
+                        'field'    => 'term_id',
+                        'terms'    => $category_id,
+                    ),
                 );
-                $query = new WP_Query($args); 
-                if ($query->have_posts()) : 
-                    while ($query->have_posts()) : $query->the_post();
-                        ?>
-                         <a href="<?php echo home_url('/detail-product/?product_id=') . get_the_ID(); ?>" style="text-decoration: none; color: inherit;">
-                            <div class="card_product">
-                                <div class="card_header">
-                                    <div class="img-container">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/article-pages/logo-time-2.png" alt="">
-                                    </div>
-                                    <h4><?php the_title(); ?></h4>
+            }
+
+            $query = new WP_Query($args); 
+
+            if ($query->have_posts()) : 
+                while ($query->have_posts()) : $query->the_post();
+                    // Ambil URL gambar dari custom field 'foto-product' di ACF
+                    $foto_product = get_field('foto-product'); 
+                    $foto_url = $foto_product ? $foto_product['url'] : get_template_directory_uri() . '/assets/img/article-pages/logo-time-2.png'; // Jika tidak ada gambar, gunakan gambar default
+                    ?>
+                    <a href="<?php echo home_url('/detail-product/?product_id=') . get_the_ID(); ?>" style="text-decoration: none; color: inherit;">
+                        <div class="card_product">
+                            <div class="card_header">
+                                <div class="img-container">
+                                    <!-- Gunakan URL dari ACF atau fallback ke gambar default -->
+                                    <img src="<?php echo esc_url($foto_url); ?>" alt="">
                                 </div>
-                                <div class="card_body">
-                                    <?php
-                                        // Ambil data dari custom field 'deskripsi-singkat'
-                                        $deskripsi_singkat = get_field('deskripsi-singkat');
-                                        // Batasi menjadi 8 kata dengan wp_trim_words
-                                        $excerpt = wp_trim_words($deskripsi_singkat, 8, ' ...');
-                                    ?>
-                                    <p><?php echo esc_html($excerpt);?></p>
-                                    <button class="product_button">Detail</button>
-                                </div>
+                                <h4><?php the_title(); ?></h4>
                             </div>
-                        </a>
-     
-                        <?php
+                            <div class="card_body">
+                                <?php
+                                    // Ambil data dari custom field 'deskripsi_singkat'
+                                    $deskripsi_singkat = get_field('deskripsi_singkat');
+                                    // Batasi menjadi 8 kata dengan wp_trim_words
+                                    $excerpt = wp_trim_words($deskripsi_singkat, 8, ' ...');
+                                ?>
+                                <p><?php echo esc_html($excerpt);?></p>
+                                <button class="product_button">Detail</button>
+                            </div>
+                        </div>
+                    </a>
+                    <?php
+                endwhile;
 
-                    endwhile;
-                    wp_reset_postdata(); 
+                wp_reset_postdata(); 
+            else :
+                echo 'No posts found.';
+            endif;
+        ?>
 
-
-                else :
-                    echo 'No posts found.';
-                endif;
-            ?>
     </div>
-
-
-
 </section>
 
 
 
-<div class="paggination" style="margin-bottom:100px;">
+    <div class="paggination" style="margin-bottom:100px;">
         <div class="prev-paggination">
             <?php if (get_previous_posts_link()) : ?>
-                <?php previous_posts_link('<img src="' . get_template_directory_uri() . '/assets/img/prev-pag-icon.svg" alt="" /> <span class="previous-link">Previous</span>'); ?>
+                <?php previous_posts_link('<img src="' . get_template_directory_uri() . '/assets/img/prev-pag-icon.svg" alt="" /> <span class="previous-link">Previous</span>', $query->max_num_pages); ?>
             <?php else : ?>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/prev-pag-icon.svg" alt="" />
                 <span style="color:#292929; text-decoration:none;">Previous</span>
@@ -161,10 +179,10 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/next-pag-icon.svg" alt="" />
             <?php endif; ?>
         </div>
-
     </div>
 
-    </div>
+
+    
 
 
     <script type="text/javascript">
