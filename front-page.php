@@ -79,15 +79,9 @@
 <div class="home-content">
     <div class="home-content-container">
         <div class="content">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/home_content.jpg" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/TI_hero.png" alt="" />
         </div>
-        <div class="content">
-            <h1>Kenapa Time Instrument?</h1>
-            <br />
-            <p>
-            Time Instrument adalah perusahaan terdepan dalam penjualan instrumen dan alat uji berkualitas tinggi. Dengan pengalaman bertahun-tahun di industri, kami menyediakan produk-produk yang dapat diandalkan dan inovatif untuk berbagai keperluan uji dan inspeksi
-            </p>
-        </div>
+
     </div>
 </div>
 

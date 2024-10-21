@@ -181,15 +181,18 @@ nav ul {
 }
 .home-content {
   width: 100%;
-  background-color: rgba(217, 217, 217, 0.2);
+  /* background-color: rgba(217, 217, 217, 0.2); */
+
   margin-top: 180px;
 }
 .home-content-container {
   margin: auto;
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-  max-width: 1400px;
+  max-width: 1400px; */
+  display: flex;
+  width: 100%;
 }
 .home-content .home-content-container .content {
   width: 100%;
@@ -197,6 +200,7 @@ nav ul {
 }
 .home-content .home-content-container .content img {
   width: 100%;
+  object-fit: cover;
 }
 .home-content .home-content-container .content {
   text-align: justify;
@@ -498,7 +502,6 @@ footer .footer-container .menu-footer a {
     width: 480px;
   }
 }
-
 
 /* end medium desktop */
 
