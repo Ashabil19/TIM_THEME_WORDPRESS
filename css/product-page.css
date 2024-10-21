@@ -1,4 +1,4 @@
-.banner{  
+.banner {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,7 +24,7 @@
   border-radius: 4px;
 }
 
-.accordion-header, 
+.accordion-header,
 .accordion-sub-header,
 .accordion-sub-sub-header {
   width: 100%;
@@ -37,8 +37,6 @@
   font-size: 16px;
   transition: background-color 0.3s ease;
   color: #4e4e4e;
-
-  ;
 }
 
 .accordion-header:hover,
@@ -47,7 +45,8 @@
   background-color: #e0e0e0;
 }
 
-.accordion-content, .accordion-sub-content {
+.accordion-content,
+.accordion-sub-content {
   display: none;
   /* padding-left: 20px; */
   background-color: #f9f9f9;
@@ -57,7 +56,6 @@
 .accordion-sub-item {
   /* margin-left: 10px; */
   /* border-top: 1px solid #ddd; */
-  
 }
 
 .accordion-item.active .accordion-content,
@@ -73,8 +71,7 @@
   background-color: #fff;
 }
 
-
-.product-section{
+.product-section {
   display: flex;
   align-items: start;
   justify-content: center;
@@ -86,16 +83,16 @@
   /* background-color: red; */
 }
 
-.box-content{
+.box-content {
   /* border: 1px solid white; */
   padding: 20px;
 }
-.box-content:nth-child(2){
+.box-content:nth-child(2) {
   /* border: 1px solid white; */
   padding: 20px;
 }
 
-.filter-container{
+.filter-container {
   width: 25%;
 }
 .product-container {
@@ -105,103 +102,112 @@
   gap: 10px; /* Jarak antar item */
 }
 
-.card_product{
+.card_product {
   width: 335px;
   height: max-content;
   padding: 5px;
 
   /* background-color: #ffff; */
-  border: 1px solid #292929;
+  border: 0px solid #292929;
   border-radius: 5px;
 
   color: rgb(72, 72, 72);
 }
 
-
-.card_header img{
+.card_header img {
   width: 100%;
   height: 100%;
   /* height: 300px; */
 }
 
-.img-container{
+.img-container {
   width: 100%;
   height: 340px;
 }
 
-
-
-.card_header h4{
+.card_header h4 {
   font-size: 20px;
   margin-bottom: 20px;
 }
 
-
-.card_body p{
+.card_body p {
   font-size: 14px;
 }
-.product_button{
+.product_button {
   width: 100%;
-  background-color: #161D6F;
-  padding: 20px 50px ;
+  background-color: #161d6f;
+  padding: 20px 50px;
   margin-top: 7px;
   color: white;
   border: none;
   border-radius: 2px;
 }
 
-
 /* Responsive Styling */
+
+@media (max-width: 1280px) {
+  .product-section {
+    padding: 50px 70px;
+  }
+  .card_product {
+    width: 215px;
+  }
+  .img-container {
+    height: 220px;
+  }
+  .img-container img {
+    object-fit: contain;
+    object-position: top;
+  }
+}
+
 @media (max-width: 768px) {
-  .banner{
+  .banner {
     background-size: cover; /* Pastikan gambar mencakup seluruh area */
     background-position: center; /* Posisi tengah untuk gambar */
     background-attachment: scroll; /* Mengubah dari fixed ke scroll */
     background-repeat: no-repeat;
     height: 40vh; /* Kurangi tinggi pada perangkat yang lebih kecil */
   }
-  .filter-container{
+  .filter-container {
     width: 25%;
   }
-  .product-container{
+  .product-container {
     grid-template-columns: 1fr; /* 1 kolom di layar kecil (mobile) */
-
   }
 
-  .product-section{
+  .product-section {
     padding: 10px;
   }
 
-  .card_product{
+  .card_product {
     width: 220px;
     height: max-content;
     padding: 5px;
-  
+
     /* background-color: #ffff; */
     border: 1px solid #292929;
     border-radius: 5px;
-  
+
     color: rgb(72, 72, 72);
   }
 
-  .img-container{
+  .img-container {
     width: 100%;
     height: 220px;
   }
-  .product_button{
+  .product_button {
     width: 100%;
-    background-color: #161D6F;
-    padding: 20px 50px ;
+    background-color: #161d6f;
+    padding: 20px 50px;
     margin-top: 20px;
     color: white;
     border: none;
     border-radius: 2px;
   }
 
-  .card_header h4{
+  .card_header h4 {
     font-size: 20px;
     margin-bottom: 5px;
   }
-  
 }
-
