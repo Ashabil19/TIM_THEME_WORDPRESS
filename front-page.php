@@ -76,16 +76,133 @@
     </div>
 </div>
 
-<div class="home-content">
-    <div class="home-content-container">
-        <div class="content">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/TI_hero.png" alt="" />
-        </div>
+<!-- vertikal slider -->
+<div class="slider2-container">
+    <div class="dot2s2-nav">
+        <div class="dot2 active"></div>
+        <div class="dot2"></div>
+    </div>
 
+    <div class="slider2">
+        <div class="slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/TI_hero.png" alt="Slide 1" />
+        </div>
+        <div class="slide video-slide">
+            <div class="video-caption">
+                <h1>TIME 5100</h1>
+                <h3>Pen Type Leeb Hardness Tester</h3>
+            </div>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner-tim3.jpg" alt="Slide 1" />
+
+        </div>
     </div>
 </div>
 
+<script>
+    // vertikal slider home
+    const slider2 = document.querySelector(".slider2");
+    const slider2Container = document.querySelector(".slider2-container");
+    const slides = document.querySelectorAll(".slide");
+    const dot2s2 = document.querySelectorAll(".dot2");
+    const paragrafSection = document.querySelector("#paragraf");
+    let currentSlide = 0;
+    let isScrolling = false;
+    let startY;
 
+    function goToSlide(index) {
+        if (index < 0) index = 0;
+        if (index >= slides.length) index = slides.length - 1;
+
+        slider2.style.transform = `translateY(-${index * 100}vh)`;
+        currentSlide = index;
+
+        dot2s2.forEach((dot2) => dot2.classList.remove("active"));
+        dot2s2[currentSlide].classList.add("active");
+    }
+
+    dot2s2.forEach((dot2, index) => {
+        dot2.addEventListener("click", () => {
+            goToSlide(index);
+        });
+    });
+
+    // Mouse wheel event
+    window.addEventListener(
+        "wheel",
+        (e) => {
+            const slider2Rect = slider2Container.getBoundingClientRect();
+            // Cek apakah kita berada di area slider2
+            if (slider2Rect.top <= 0 && slider2Rect.bottom > 0) {
+                if (!isScrolling) {
+                    isScrolling = true;
+
+                    if (e.deltaY > 0) {
+                        // Scrolling ke bawah
+                        if (currentSlide < slides.length - 1) {
+                            // Jika belum slide terakhir, pindah ke slide berikutnya
+                            e.preventDefault();
+                            goToSlide(currentSlide + 1);
+                        }
+                        // Jika sudah di slide terakhir, biarkan scroll normal ke section berikutnya
+                    } else if (e.deltaY < 0) {
+                        // Scrolling ke atas
+                        if (currentSlide > 0) {
+                            // Jika bukan slide pertama, pindah ke slide sebelumnya
+                            e.preventDefault();
+                            goToSlide(currentSlide - 1);
+                        }
+                    }
+
+                    setTimeout(() => {
+                        isScrolling = false;
+                    }, 500);
+                } else {
+                    e.preventDefault();
+                }
+            }
+        }, {
+            passive: false
+        }
+    );
+
+    // Touch events for mobile
+    slider2.addEventListener("touchstart", (e) => {
+        startY = e.touches[0].clientY;
+    });
+
+    slider2.addEventListener("touchmove", (e) => {
+        if (!isScrolling && startY) {
+            const currentY = e.touches[0].clientY;
+            const diff = startY - currentY;
+
+            if (Math.abs(diff) > 50) {
+                isScrolling = true;
+
+                if (diff > 0) {
+                    // Geser ke atas
+                    if (currentSlide < slides.length - 1) {
+                        e.preventDefault();
+                        goToSlide(currentSlide + 1);
+                    }
+                } else if (diff < 0) {
+                    // Geser ke bawah
+                    if (currentSlide > 0) {
+                        e.preventDefault();
+                        goToSlide(currentSlide - 1);
+                    }
+                }
+
+                startY = null;
+                setTimeout(() => {
+                    isScrolling = false;
+                }, 800);
+            }
+        }
+    });
+    // end vertikal slider home
+</script>
+
+<!-- vertikal slider -->
 
 
 
