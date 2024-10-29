@@ -92,7 +92,17 @@
                 <h1>TIME 5100</h1>
                 <h3>Pen Type Leeb Hardness Tester</h3>
             </div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner-tim3.jpg" alt="Slide 1" />
+            <video
+                id="video"
+                role="presentation"
+                preload="auto"
+                playsinline=""
+                crossorigin="anonymous"
+                loop=""
+                muted=""
+                autoplay="">
+                <source src="<?php echo get_template_directory_uri(); ?>/assets/video/hardness_tester.mp4" type="video/mp4" />
+            </video>
 
         </div>
     </div>

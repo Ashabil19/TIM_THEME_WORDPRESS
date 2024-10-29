@@ -145,7 +145,7 @@
 
 /* Responsive Styling */
 
-@media (max-width: 1280px) {
+@media (max-width: 1366px) {
   .product-section {
     padding: 50px 70px;
   }
