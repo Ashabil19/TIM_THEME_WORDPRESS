@@ -85,7 +85,7 @@
 
     <div class="slider2">
         <div class="slide">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/TI_hero.png" alt="Slide 1" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ti_hero.svg" alt="Slide 1" />
         </div>
         <div class="slide video-slide">
             <div class="video-caption">
