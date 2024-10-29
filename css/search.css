@@ -1,0 +1,12 @@
+section.search-results {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.container-card.search {
+  display: flex;
+  column-gap: 10px;
+  max-width: 1350px;
+  flex-wrap: wrap;
+}
