@@ -3,8 +3,10 @@
 <footer>
     <div class="footer-container">
         <div class="logo-content">
+            <div class="footer-logo">
 
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_footer.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-taharica-instruments.png" alt="">
+            </div>
             <div class="footer-contact">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/telephone-ft.svg" alt="" class="icon_footer">
                 <span>021 8690 6777</span>
