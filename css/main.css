@@ -63,7 +63,7 @@ nav {
   align-items: center;
   background-color: #283891;
   top: 0;
-  z-index: 1;
+  z-index: 3;
 }
 nav .logo {
   display: none;
@@ -114,6 +114,35 @@ nav ul {
   width: max-content;
   transition: 1s;
 }
+.slide .slide-btn {
+  background-color: transparent;
+  position: absolute;
+  bottom: 23px;
+  right: 40%;
+  border: none;
+}
+.slide .slide-btn img {
+  width: 30%;
+}
+.bounce2 {
+  animation: bounce2 2s ease infinite;
+}
+@keyframes bounce2 {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-40px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
 .slider:hover .dots {
   opacity: 1;
 }

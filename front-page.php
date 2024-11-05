@@ -86,6 +86,7 @@
     <div class="slider2">
         <div class="slide">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ti_hero.svg" alt="Slide 1" />
+            <button class="slide-btn bounce2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/down-arrow.svg" alt="down arrow"></button>
         </div>
         <div class="slide video-slide">
             <div class="video-caption">
@@ -103,7 +104,7 @@
                 autoplay="">
                 <source src="<?php echo get_template_directory_uri(); ?>/assets/video/hardness_tester.mp4" type="video/mp4" />
             </video>
-
+            <button class="slide-btn bounce2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/up-arrow.svg" alt="up arrow"></button>
         </div>
     </div>
 </div>
@@ -114,7 +115,8 @@
     const slider2Container = document.querySelector(".slider2-container");
     const slides = document.querySelectorAll(".slide");
     const dot2s2 = document.querySelectorAll(".dot2");
-    const paragrafSection = document.querySelector("#paragraf");
+    const slideButtons = document.querySelectorAll(".slide-btn");
+
     let currentSlide = 0;
     let isScrolling = false;
     let startY;
@@ -136,44 +138,16 @@
         });
     });
 
-    // Mouse wheel event
-    window.addEventListener(
-        "wheel",
-        (e) => {
-            const slider2Rect = slider2Container.getBoundingClientRect();
-            // Cek apakah kita berada di area slider2
-            if (slider2Rect.top <= 0 && slider2Rect.bottom > 0) {
-                if (!isScrolling) {
-                    isScrolling = true;
-
-                    if (e.deltaY > 0) {
-                        // Scrolling ke bawah
-                        if (currentSlide < slides.length - 1) {
-                            // Jika belum slide terakhir, pindah ke slide berikutnya
-                            e.preventDefault();
-                            goToSlide(currentSlide + 1);
-                        }
-                        // Jika sudah di slide terakhir, biarkan scroll normal ke section berikutnya
-                    } else if (e.deltaY < 0) {
-                        // Scrolling ke atas
-                        if (currentSlide > 0) {
-                            // Jika bukan slide pertama, pindah ke slide sebelumnya
-                            e.preventDefault();
-                            goToSlide(currentSlide - 1);
-                        }
-                    }
-
-                    setTimeout(() => {
-                        isScrolling = false;
-                    }, 500);
-                } else {
-                    e.preventDefault();
-                }
+    // Navigasi dengan tombol slider
+    slideButtons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+            if (index === 0 && currentSlide < slides.length - 1) {
+                goToSlide(currentSlide + 1); // Tombol "down arrow"
+            } else if (index === 1 && currentSlide > 0) {
+                goToSlide(currentSlide - 1); // Tombol "up arrow"
             }
-        }, {
-            passive: false
-        }
-    );
+        });
+    });
 
     // Touch events for mobile
     slider2.addEventListener("touchstart", (e) => {
