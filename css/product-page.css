@@ -98,20 +98,23 @@
 .product-container {
   width: 75%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 kolom dengan lebar yang sama */
-  gap: 10px; /* Jarak antar item */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0px;
+  row-gap: 30px;
+  column-gap: 10px;
 }
 
 .card_product {
   width: 335px;
-  height: max-content;
+  height: 545px;
   padding: 5px;
-
   /* background-color: #ffff; */
-  border: 0px solid #292929;
+  /* border: 1px solid red; */
   border-radius: 5px;
-
   color: rgb(72, 72, 72);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card_header img {
@@ -137,7 +140,6 @@
   width: 100%;
   background-color: #161d6f;
   padding: 20px 50px;
-  margin-top: 7px;
   color: white;
   border: none;
   border-radius: 2px;
