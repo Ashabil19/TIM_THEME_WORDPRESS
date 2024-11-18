@@ -63,20 +63,20 @@ if ($product_id > 0) {
                 <div class="tabcontent-product-container" data-tabsProductet="3">
                     <div class="tabcontent-product tab-product-active" data-tabsProductet="3">
                         <h1>Spesifikasi</h1>
-                        <p><?php echo wp_kses_post(get_field('spesifikasi')); ?></p>
+                        <div class="spesifikasi_content"><?php echo wp_kses_post(get_field('spesifikasi')); ?></div>
                     </div>
                     <div class="tabcontent-product" data-tabsProductet="3">
                         <h3>Fitur</h3>
-                        <p><?php echo wp_kses_post(get_field('fitur')); ?></p>
+                        <div class="fitur_content"><?php echo wp_kses_post(get_field('fitur')); ?></div>
                     </div>
                     <div class="tabcontent-product" data-tabsProductet="3">
                         <h3>What You Get</h3>
-                        <p><?php echo wp_kses_post(get_field('what-you-get')); ?></p>
+                        <div class="wyg_content"><?php echo wp_kses_post(get_field('what-you-get')); ?></div>
                     </div>
                 </div>
             </section>
 
-        
+
             <section id="related-article-product">
                 <h2>Related Article</h2>
                 <div class="article-container">
@@ -101,7 +101,7 @@ if ($product_id > 0) {
                                         $excerpt = wp_trim_words(get_the_excerpt(), 20, '...');
                                         echo esc_html($excerpt);
                                         ?>
-                                </p>
+                                    </p>
                                 </div>
                             </div>
                     <?php

@@ -250,13 +250,13 @@ section#related-product-detail
     display: none;
   }
   section#detail-product {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding: 0;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     margin-top: 10px;
   }
   section#detail-product .product-img {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     flex-direction: column-reverse;
   }
   section#detail-product .product-img .img-item-container {
@@ -271,8 +271,48 @@ section#related-product-detail
     height: 100%;
   }
   section#detail-product .product-desc {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+  }
+  section#detail-product .product-desc h1 {
+    margin-top: 15px;
+    order: 2;
+  }
+  section#detail-product .product-desc small {
+    display: none;
+  }
+  section#detail-product .product-desc p {
+    order: 3;
+    margin-top: 6px;
+    width: 95%;
+    text-align: justify;
+  }
+  section#detail-product .product-desc button {
+    width: 60%;
+    order: 1;
+  }
+  section#container-tab-product {
+    padding: 0 0.5rem;
+  }
+  .spesifikasi_content,
+  .fitur_content,
+  .wyg_content {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  section#related-article-product {
+    padding: 0 0.5rem;
+    gap: 0px;
+  }
+  section#related-product-detail {
+    padding: 0 0.5rem;
+  }
+  section#related-product-detail .product-container {
+    row-gap: 50px;
+  }
+  section#related-product-detail .product-container .product-card {
+    width: 340px;
+    height: 340px;
   }
 }

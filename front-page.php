@@ -304,7 +304,9 @@
                 <?php
                 $args = array(
                     'post_type' => 'product', // Custom post type 'product'
-                    'posts_per_page' => -1, // Jumlah post yang ingin ditampilkan
+                    'posts_per_page' => 16, // Jumlah post yang ingin ditampilkan
+                    'orderby' => 'date', // Urutkan berdasarkan tanggal publikasi
+                    'order' => 'ASC' // Urutan menurun, dari yang terbaru ke lama
                 );
 
                 $query = new WP_Query($args);
