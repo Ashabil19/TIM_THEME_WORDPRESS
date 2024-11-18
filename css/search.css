@@ -4,9 +4,14 @@ section.search-results {
   flex-direction: column;
   row-gap: 20px;
 }
+section.search-results h1 {
+  text-align: center;
+}
 .container-card.search {
   display: flex;
-  column-gap: 10px;
+  column-gap: 25px;
   max-width: 1350px;
   flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
 }
