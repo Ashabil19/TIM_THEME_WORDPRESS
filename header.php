@@ -22,6 +22,7 @@
 </head>
 
 
+
 <body <?php body_class(); ?>>
     <div class="nav-search-bar">
         <img style="width: 20%;" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-taharica-instruments.png" alt="">
