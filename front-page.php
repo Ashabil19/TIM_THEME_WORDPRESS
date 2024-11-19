@@ -48,29 +48,32 @@
     <div class="slogan-container">
         <div class="slogan-content">
             <div class="slogan-header">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slogan1.png" alt="" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slogan1.svg" alt="" />
             </div>
             <h4>Best Quality</h4>
             <p>
-                It's content strategy gone awry right from the start are wasn't.
+                Kualitas terbaik,
+                dibuat dengan teliti untuk kepuasan Anda.
             </p>
         </div>
         <div class="slogan-content">
             <div class="slogan-header">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slogan2.png" alt="" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slogan2.svg" alt="" />
             </div>
-            <h4>Online Payment</h4>
+            <h4>Best Price</h4>
             <p>
-                It's content strategy gone awry right from the start are wasn't.
+                Harga terbaik,
+                selalu memberikan nilai lebih untuk Anda.
             </p>
         </div>
         <div class="slogan-content">
             <div class="slogan-header">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slogan3.png" alt="" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slogan3.svg" alt="" />
             </div>
-            <h4>Fast Delivery</h4>
+            <h4>Waranty</h4>
             <p>
-                It's content strategy gone awry right from the start are wasn't.
+                Garansi terbaik,
+                kepuasan Anda adalah prioritas utama kami.
             </p>
         </div>
     </div>

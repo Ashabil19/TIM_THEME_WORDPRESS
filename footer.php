@@ -7,22 +7,20 @@
 
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-taharica-instruments.png" alt="">
             </div>
+
             <div class="footer-contact">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/telephone-ft.svg" alt="" class="icon_footer">
-                <span>021 8690 6777</span>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/wa-ft.svg" alt="" class="icon_footer">
+                <span>0857-1971-1865(Mr. Almas)</span>
             </div>
             <div class="footer-contact">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/wa-ft.svg" alt="" class="icon_footer">
-                <span>0819 4401 4959</span>
+                <span>0812-9595-7914 (Mr. Parmin)</span>
             </div>
             <div class="footer-contact">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/wa-ft.svg" alt="" class="icon_footer">
-                <span>0852 1556 0669</span>
+                <span>0819-4401-4959 (Mr. Arya)</span>
             </div>
-            <div class="footer-contact">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mail-ft.svg" alt="" class="icon_footer">
-                <span>@taharica.com</span>
-            </div>
+
             <div class="footer-contact">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/map-ft.svg" alt="" class="icon_footer">
                 <span>Jl. Radin Inten II No. 62 Duren Sawit - Jakarta 13440</span>
