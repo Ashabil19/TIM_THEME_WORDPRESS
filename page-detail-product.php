@@ -47,10 +47,21 @@ if ($product_id > 0) {
                     <h1><?php the_title(); ?></h1>
                     <small><?php echo get_the_category_list(', '); ?></small>
                     <p><?php echo wp_kses_post(get_field('deskripsi-singkat')); ?></p>
-                    <button>
+                    <!-- <button>
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/detail-product-pages/Whatsapp.svg" alt="" />
                         <h3>Minta Penawaran</h3>
-                    </button>
+                    </button> -->
+                    <a href="https://wa.me/6285215560669?text=Hallo,%20saya%20ingin%20mendapatkan%20penawaran%20dari%20produk%20ini:%20<?php echo urlencode(get_permalink()); ?>" 
+                        target="_blank" 
+                        class="btn-penawaran" 
+                        style="display: inline-flex; align-items: center; background:  #152793; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px; font-size: 14px; gap: 10px;">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/detail-product-pages/Whatsapp.svg" 
+                            alt="WhatsApp Icon" 
+                            style="width: 14%; height: auto;" />
+                        <h3 style="margin: 0; font-size: 16px;">Minta Penawaran</h3>
+                    </a>
+
+
                 </div>
             </section>
 
